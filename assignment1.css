@@ -1,0 +1,27 @@
+#leftbox
+{
+    background-color: #c4abab;
+    height:300px;
+    width: 400px;
+    float: left;
+}
+#rightbox
+{
+  background-color: #a74141;
+    height: 300px;
+    width: 200px;
+    float: left;       
+}
+#buttombox
+{
+    background-color: #648cb9;
+    height: 100px;
+    width: 600px;
+    float: left;
+}
+body
+{
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
