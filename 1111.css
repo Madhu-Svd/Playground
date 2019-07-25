@@ -1,0 +1,20 @@
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+#aa{
+    background-color:#6126e9;
+    width: 400px;
+    height: 300px;
+}
+#bb{
+    background-color: #ff0000;
+    width: 200px;
+    height: 300px;
+}
+#cc{
+    background-color: #0ecc47;
+    width: 600px;
+    height: 150px;
+}

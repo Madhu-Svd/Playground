@@ -1,0 +1,27 @@
+#leftbox{
+    color: #3220cc;
+    background-color: #a37592;
+    height:300px;
+    width: 400px;
+    float: left;
+}
+#rightbox{
+    color: #9e7e92;
+    background-color: #752727;
+    height: 300px;
+    width: 200px;
+    float: left;     
+}
+#buttombox{
+    color: #dfee0a;
+    background-color: #1d7fee;
+    height: 100px;
+    width: 600px;
+    float: left;
+}
+
+body{
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
