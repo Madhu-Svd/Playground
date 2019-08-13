@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: auto;
+    background-color: #ffffff;
+}
+.main{
+    border: 1px solid black;
+}
+.burger-menu{
+    width: 10%;
+    float: left;
+    border: 1px solid blue;
+}
+.burger-menu-icon{
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+.user-menu{
+    width: 90%;
+    border: 1px solid rgb(160, 29, 95);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile-icon{
+    width: 24px;
+    height: 24px;
+}
+p{
+    /* float: right; */
+}
+.dropdown-icon{
+    width: 8px;
+    height: 8px;
+}

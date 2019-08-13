@@ -1,0 +1,105 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: auto;
+    background-color: #ffffff;
+}
+/* div */
+.main{
+    border: 1px solid black;
+}
+.burger-menu{
+    width: 10%;
+    float: left;
+    border: 1px solid blue;
+}
+.burger-menu-icon{
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+.user-menu{
+    width: 90%;
+    float: right;
+    border: 1px solid rgb(160, 29, 95);
+  
+}
+
+.profile-icon{
+    width: 24px;
+    height: 24px;
+    float: right;
+    /* float: none;
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
+p{
+    float: right;
+    /* float: none;
+    position: absolute;
+    top: 2%;
+    left: 53%;
+    transform: translate(-50%, -50%); */
+}
+.dropdown-icon{
+    width: 8px;
+    height: 8px;
+    float: right;
+    /* float: none;
+    position: absolute;
+    top: 2%;
+    left: 56%;
+    transform: translate(-50%, -50%); */
+}
+
+/* div */
+
+
+/* .main{
+    border: 1px solid black;
+}
+.burger-menu{
+    width: 10%;
+    float: left;
+    border: 1px solid blue;
+}
+.burger-menu-icon{
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+.user-menu{
+    width: 90%;
+    float: right;
+    border: 1px solid rgb(160, 29, 95);
+    vertical-align: middle;
+}
+.user-menu-sub{
+    float: right;
+    border: 1px solid green;
+}
+.profile-icon{
+    width: 24px;
+    height: 24px;
+    float: right;
+}
+p{
+    float: right;
+}
+.dropdown-icon{
+    width: 8px;
+    height: 8px;
+    float: right;
+}  */
+
+
+
+
+
+
+

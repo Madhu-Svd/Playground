@@ -1,0 +1,53 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: auto;
+    background-color: #ffffff;
+}
+.main{
+    border: 1px solid black;
+}
+.burger-menu{
+    width: 10%;
+    float: left;
+    border: 1px solid blue;
+}
+.burger-menu-icon{
+    width: 24px;
+    height: 24px;
+    float: left;
+}
+.user-menu{
+    width: 90%;
+    float: right;
+    border: 1px solid rgb(160, 29, 95);
+}
+.user-menu-list{
+    list-style-type: none;
+    border: 1px solid rgb(10, 186, 209);
+}
+.user-menu-list-one{
+    float: right;
+}
+.user-menu-list-two{
+    float: right;
+}
+.user-menu-list-three{
+    float: right;
+}
+.profile-icon{
+    width: 24px;
+    height: 24px;
+    float: right;
+}
+p{
+    float: right;
+}
+.dropdown-icon{
+    width: 8px;
+    height: 8px;
+    float: right;
+}  
