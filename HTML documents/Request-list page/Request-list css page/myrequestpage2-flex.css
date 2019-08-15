@@ -175,11 +175,12 @@ body{
     height: 45px;
     border-radius: 50%;
 }
-.circle{
+.request1 .circle{
     width:12px;
     height:12px;
     border-radius: 50%;
-    background-color: #24D081; 
+    background: #FFC60A 0% 0% no-repeat padding-box;
+    border: 1px solid #FFC60A;
 }
 .request1 .right{
     display: flex;
@@ -210,7 +211,13 @@ body{
     height: 45px;
     border-radius: 50%;
 }
-
+.request2 .circle{
+    width:12px;
+    height:12px;
+    border-radius: 50%;
+    background: #24D081 0% 0% no-repeat padding-box;
+    border: 1px solid #24D081;
+}
 .request3{
     display: flex;
     align-items: center;
@@ -228,6 +235,13 @@ body{
     height: 45px;
     border-radius: 50%;
 }
+.request3 .circle{
+    width:12px;
+    height:12px;
+    border-radius: 50%;
+    background: #D0C824 0% 0% no-repeat padding-box;
+    border: 1px solid #CB9928;
+}
 .request4{
     display: flex;
     align-items: center;
@@ -244,6 +258,13 @@ body{
     width: 45px;
     height: 45px;
     border-radius: 50%;
+}
+.request4 .circle{
+    width:12px;
+    height:12px;
+    border-radius: 50%;
+    background: #D03E24 0% 0% no-repeat padding-box;
+    border: 1px solid #D03E24;
 }
 .show-more{    
     display: flex;
