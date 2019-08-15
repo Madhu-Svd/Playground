@@ -1,98 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title> Request page</title>
-        <link rel="stylesheet" type="text/css" href="flexbox-12.css">
-    </head>
-        <body >
-                <header>
-                    <div class="website-header">
-                        <img src="images/request-icons-02.png" alt="image"/>
-                        <div class="icons">
-                                <img src="a1.jpg" alt="image"/>
-                                <span>Jhon Deo</span>
-                                <img src="images/request-icons-05.png" alt="button"/>
-                        </div>
+
+<head>
+    <title> Request page</title>
+    <link rel="stylesheet" type="text/css" href="../HTML documents/flexbox-12.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="burger-menu">
+            <img src="images/request-icons-02.png" class="burger-menu-icon" alt="burger-menu" />
+        </div>
+        <div class="user-menu">
+            <img src="images/profile-picture.png" class="profile-icon" alt="profile-image" />
+            <p style="color: #595959;font-size:12px;">John Doe</p>
+            <img src="images/request-icons-05.png" class="dropdown-icon" alt="dropdown-image" />
+        </div>
+        <div style="clear: both"></div>
+    </div>
+
+    <div class="main-container">
+        <div class="main-container-left">
+            <p class="requisition">REQUISITION</p>
+            <img src="images/request-image-31.png" alt="image" class="leftside-image" />
+
+        </div>
+        <div class="main-container-right">
+            <div class="main">
+                <div class="main-header">
+                    <div class="main-header-left">
+                        <p><b>ITEMS</b><br>
+                            ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
-                </header>
-                <div class="container">
-                    <div class="container-items">
-                        <p>REQUISITION</p>
-                        <img src="images/request-image-31.png" alt="image"/> 
+                    <div class="main-header-right">
+                        <span style="font-size: 12px;">ADD ITEMS</span>
+                        <img src="images/request-icons-10.png" class="add-icon" alt="button" />
                     </div>
-                    <div class="container-items1">
-                        <div class="main1">
-                            <div class="main">
-                                <div class="items">
-                                    <p><b>ITEMS</b><br>
-                                    ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                                <span>ADD ITEMS</span>
-                                <img src="images/request-icons-10.png" alt="button"/>
-                            </div>
-                            <div class="main2">
-                                    <div class="items">
-                                        <div>IBM ThinkServer TS150 Tower Server With<br>Max. Processor 1 x Intel Xeon E3 (Quad Core)<br> E3-1225 v5"(3.3 GHz /Cache 8 MB).<br><br>
-                                            <button type="button" value="READ MORE"><b>READ MORE</b></button></div>
-                                        <div>01</div>
-                                        <div>10 Jul 2019</div>
-                                        <div>Rs. 45, 000</div>
-                                        <div><img src="images/request-icons-11.png" alt="button"/></div>
-                                    </div>
-                             </div>
-                            <div class="main3">
-                                    <div class="items">
-                                        <div>Lenovo ThinkServer TS450<br> (PN:70M2001VIH) With Max. Processor 1 <br>x Intel Xeon E3 (Quad Core) E3-1225 <br><br>
-                                            <button type="button" value="READ MORE"><b>READ MORE</b></button></div>
-                                        <div>02</div>
-                                        <div>10 Jul 2019</div>
-                                        <div>Rs. 45, 000</div>
-                                        <div><img src="images/request-icons-11.png" alt="button"/> </div>
-                                    </div>
-                                   
-                            </div>
-                            <div class="main4">
-                                    <div class="items">
-                                        <div>IBM X3300M4 Server With x3300M4/ Part<br> NO:7382IA4/ Intel Xeon E5 1230v2 1.8 <br>GHz,10 MB,1066MHz/ 1x 8GB RAM/ <br><br>
-                                            <button type="button" value="READ MORE"><b>READ MORE</b></button></div>
-                                        <div>01</div>
-                                        <div>10 Jul 2019</div>
-                                        <div>Rs. 45, 000</div>
-                                        <div><img src="images/request-icons-11.png" alt="button"/> </div>
-                                    </div>
-                              </div>
-                            <div class="main5">
-                                    <div class="items">
-                                       <div>IBM Lenovo ThinkServer RD450 Rack <br>Server (PN:70Q90059IH) with 1 x Intel® <br>Xeon® E5-2620v4<br><br>
-                                        <button type="button" value="READ MORE"><b>READ MORE</b></button></div>
-                                       <div>01</div>
-                                       <div>10 Jul 2019</div>
-                                       <div>Rs. 45, 000</div>
-                                       <div><img src="images/request-icons-11.png" alt="button"/> </div>
-                                    </div>
-                            </div>
-                            <div class="main6">
-                                    <div class="items">
-                                        <div>daptec 128 MB Raid Controller Pair. Pci-e <br>SAS/SATA<br><br>
-                                            <button type="button" value="READ MORE"><b>READ MORE</b></button></div>
-                                        <div>01</div>
-                                        <div>10 Jul 2019</div>
-                                        <div>Rs. 45, 000</div>
-                                        <div><img src="images/request-icons-11.png" alt="button"/> </div>
-                                    </div>     
-                                    
-                            </div>
-                        </div>
-                         <div class="footer">
-                           <div><p><b><u>SAVE DRAFT</u></b></p></div>
-                            <div><a href="#"><b>BACK</b></a></div>
-                            <div><button type="button">NEXT--></button></div>
-                        </div> 
+                    <div style="clear: both"></div>
+                </div>
+
+                <div class="items1">
+                    <div class="items-list1">
+                        <div>IBM ThinkServer TS15 Tower Server with<br>Max. Processor 1 x Intel <br> E3-1225 v5"(3.3 GHz
+                            /Cache 8 MB).<br><br>
+                            <button type="button" value="READ MORE"><b>READ MORE</b></button></div>
+                        <div>01</div>
+                        <div>10 Jul 2019</div>
+                        <div>Rs. 45, 000</div>
+                        <div><img src="images/request-icons-11.png" class="menu-icon" alt="button" /></div>
                     </div>
-                </div> 
-        </body>
+                    <div style="clear: both"></div>
+                </div>
+
+                <div class="items1">
+                    <div class="items-list2">
+                        <div>Lenovo ThinkServer TS450(PN:70M2001)<br>Processor 1x Intel Xeon E3<br> E3-1225v5"(3.3 GHz
+                            /Cache 8 MB) <br><br>
+                            <button type="button" value="READ MORE"><b>READ MORE</b></button></div>
+                        <div>02</div>
+                        <div>10 Jul 2019</div>
+                        <div>Rs. 45, 000</div>
+                        <div><img src="images/request-icons-11.png" class="menu-icon" alt="button" /></div>
+                    </div>
+                    <div style="clear: both"></div>
+                </div>
+
+                <div class="items1">
+                    <div class="items-list3">
+                        <div>IBM X3300M4 Server With x3300M4/Part<br>NO:7382IA4/Xeon E5 1230v2 NO:73828/<br>GHz,10
+                            MB,1066MHz/1x 8GB RAM/<br><br>
+                            <button type="button" value="READ MORE"><b>READ MORE</b></button></div>
+                        <div>01</div>
+                        <div>10 Jul 2019</div>
+                        <div>Rs. 45, 000</div>
+                        <div><img src="images/request-icons-11.png" class="menu-icon" alt="button" /></div>
+                    </div>
+                    <div style="clear: both"></div>
+                </div>
+
+                <div class="items1">
+                    <div class="items-list4">
+                        <div> IBM Lenovo ThinkServer RD450 Rack <br> (PN:70Q90059IH) with 1 x Intel® Xeon E<br>Xeon®
+                            E5-2620v4<br><br>
+                            <button type="button" value="READ MORE"><b>READ MORE</b></button></div>
+                        <div>01</div>
+                        <div>10 Jul 2019</div>
+                        <div>Rs. 45, 000</div>
+                        <div><img src="images/request-icons-11.png" class="menu-icon" alt="button" /></div>
+                    </div>
+                    <div style="clear: both"></div>
+                </div>
+                <div class="items1">
+                    <div class="items-list5">
+                        <div>daptec 128 MB Raid Controller Pair. Pci-e <br>SAS/SATA<br><br>
+                            <button type="button" value="READ MORE"><b>READ MORE</b></button></div>
+                        <div>01</div>
+                        <div>10 Jul 2019</div>
+                        <div>Rs. 45, 000</div>
+                        <div><img src="images/request-icons-11.png" class="menu-icon" alt="button" /></div>
+                    </div>
+                    <div style="clear: both"></div>
+                </div>
+            </div>
+            <div style="min-height: 5vh"></div>
+            <div class="footer">
+                <div><a href="#" style="font-size: 12px; font-weight:bold;color: #595959">SAVE DRAFT</a></div>
+                <div class="footer-right">
+                    <div><a href="#" style="font-size: 12px; font-weight:bold;padding-right: 1%">BACK</a></div>
+                    <div><button type="button" class="btn" >NEXT--></button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
 </html>
-
-
- 
-                    

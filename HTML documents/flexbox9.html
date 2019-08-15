@@ -1,61 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title> Request page</title>
-        <link rel="stylesheet" type="text/css" href="flexbox9.css">
-    </head>
-    <body >
-        <div class="one">
-                 <div class="flex-container">
-                        <div class="flex-items">
-                            <img src="request-icons-02.png" alt="image"/>
-                        </div>
-                        <div class="flex-items1">
-                            <img src="a1.jpg" alt="image"/>
-                            <span>John Doe</span>
-                            <img src="request-icons-05.png" alt="button"/>
-                        </div>
-                </div> 
-                <div class="flex-container1">    
-                        <div style="flex-grow: 8"><span><u><b>My Requests</b></u></span></div>
-                        <div style="flex-grow: 1"><input type="text" class="txt" placeholder="search..."> 
-                        <img src="request-icons-03.png" alt="button"/>
-                        </div>
-                        <div style="flex-grow: 1"><input type="button" class="button" value="NEW REQUEST"></div>
-                </div>  
-                <div class="flex-container2">
-                        <div class="flex-item">
-                        <img src="request-icons-01.png" alt="button"/>
-                        <span>FILTER<br><b>You have not applied any filter.</b></span></div>
-                </div>   
-                <div class="flex-container3">
-                        <div class="flex-item3">
-                            <div style="flex-grow: 8"><span>PUR-2019-056<br><h5>Submitted on</h5>06 Jul 2019</span><br></div>
-                            <div style="flex-grow: 1"><img src="request-icons-14.png" alt="button"/></div>
-                            <div style="flex-grow: 0"><p>AWAITING APPROVAL<input type="radio" class="r"></p></div>
-                        </div>
-                        <div class="flex-item3">
-                            <div style="flex-grow: 3"><span>PUR-2019-056<br><h5>Submitted on</h5>06 Jul 2019</span></div>
-                            <div style="flex-grow: 1"><img src="request-icons-14.png" alt="button"/></div>
-                            <div style="flex-grow: 0"><p>APPROVED<input type="radio" class="r1"></p></div>
-                         </div>
-                        <div class="flex-item3">
-                            <div style="flex-grow: 3"><span>PUR-2019-056<br><h5>Last saved on</h5>06 Jul 2019</span></div>
-                            <div style="flex-grow: 1"><img src="request-icons-14.png" alt="button"/></div>
-                            <div style="flex-grow: 0"><p>DRAFT<input type="radio" class="r2"></p></div>
-                        </div>
-                        <div class="flex-item3">
-                            <div style="flex-grow: 3"><span>PUR-2019-056<br><h5>Submitted on</h5>20 Jun 2019</span></div>
-                            <div style="flex-grow: 1"><img src="request-icons-14.png" alt="button"/></div>
-                            <div style="flex-grow: 0"><p>REJECTED<input type="radio" class="r3"></p></div>
-                        </div>
-                <div class="flex-container4">
-                        <div class="flex-item4">
-                            <div><p>SHOW MORE<img src="request-icons-05.png" alt="button"/></p></div>
-                        </div>
+
+<head>
+    <title>My Request Page using flexbox</title>
+    <link rel="stylesheet" type="text/css" href="../Request-list css page/myrequestpage1-flex.css">
+    <link rel="stylesheet" type="text/css" href="fonts.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="burger-menu">
+            <img src="../images/request-icons-02.png" class="burger-menu-icon" alt="burger-menu" />
+        </div>
+        <div class="user-menu">
+            <img src="../images/profile-picture.png" class="profile-icon" alt="profile-image" />
+            <p style="color: #595959;font-size:12px;margin-right: 1%">John Doe</p>
+            <img src="../images/request-icons-05.png" class="dropdown-icon" alt="dropdown-image" />
+        </div>
+        <div style="clear: both"></div>
+    </div>
+
+    <div style="min-height: 4vh"></div>
+    <div class="request-main-sub1">
+        <div class="a">
+            <span><u><b>My Requests</b></u></span>
+        </div>
+        <div class="search-box">
+            <input class="search-text" type="text" placeholder="search...">
+            <img src="../images/request-icons-03.png" class="search-icon" alt="search-image" />
+        </div>
+        <div>
+            <button type="button" class="button">NEW REQUEST</button>
+        </div>
+    </div>
+
+    <div style="min-height: 1vh"></div>
+    <div class="request-main">
+        <div class="filters">
+            <div><img src="../images/request-icons-01.png" alt="filter-image" class="filter-icon" onclick="init()" />
+            </div>
+            <div><span>FILTER<br></span><span><b>Showing approved requests.</b></span></div>
+        </div>
+
+
+        <div class="request1">
+            <div class="left">
+                <p style="letter-spacing: 1.4px;font-weight: bold">PUR-2019-056</p><br>
+                <p style="font-size: 1vw;letter-spacing: 0.6px">Submitted on</p>
+                <p style="letter-spacing: 0.7px;font-weight: bold">06 Jul 2019</p><br>
+            </div>
+            <div class="middle">
+                <img src="../images/request-icons-14.png" alt="bell-image" class="bell-icon" />
+            </div>
+            <div class="right">
+                <span style="color: #5A5A5A;font-size: 1.2vw;padding-right:2%">APPROVED</span>
+                <div class="circle">
                 </div>
             </div>
+        </div>
+
+        <div class="request2">
+            <div class="left">
+                <p style="letter-spacing: 1.4px;font-weight: bold">PUR-2019-056</p><br>
+                <p style="font-size: 1vw;letter-spacing: 0.6px">Submitted on</p>
+                <p style="letter-spacing: 0.7px;font-weight: bold">06 Jul 2019</p><br>
             </div>
-        </div>     
-  </body>
+            <div class="middle">
+                <img src="../images/request-icons-14.png" alt="bell-image" class="bell-icon" />
+            </div>
+            <div class="right">
+                <span style="color: #5A5A5A;font-size: 1.2vw">APPROVED</span>
+                <div class="circle">
+                </div>
+            </div>
+        </div>
+
+        <div class="request3">
+            <div class="left">
+                <p style="letter-spacing: 1.4px;font-weight: bold">PUR-2019-056</p><br>
+                <p style="font-size: 1vw;letter-spacing: 0.6px">Last saved on</p>
+                <p style="letter-spacing: 0.7px;font-weight: bold">06 Jul 2019</p><br>
+            </div>
+            <div class="middle">
+                <img src="../images/request-icons-14.png" alt="bell-image" class="bell-icon" />
+            </div>
+            <div class="right">
+                <span style="color: #5A5A5A;font-size: 1.2vw">APPROVED</span>
+                <div class="circle">
+                </div>
+            </div>
+        </div>
+
+        <div class="request4">
+            <div class="left">
+                <p style="letter-spacing: 1.4px;font-weight: bold">PUR-2019-056</p><br>
+                <p style="font-size: 1vw;letter-spacing: 0.6px">Submitted on</p>
+                <p style="letter-spacing: 0.7px;font-weight: bold">20 Jun 2019</p><br>
+            </div>
+            <div class="middle">
+                <img src="../images/request-icons-14.png" alt="bell-image" class="bell-icon" />
+            </div>
+            <div class="right">
+                <span style="color: #5A5A5A;font-size: 1.2vw">APPROVED</span>
+                <div class="circle">
+                </div>
+            </div>
+        </div>
+
+        <div class="show-more">
+            <div class="middle">
+                <p>SHOW MORE</p>
+                <img src="../images/request-icons-05.png" class="dropdown-icon" alt="dropdown-image" />
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function init() {
+        window.location = "file:///F:/madhu%20c%20s/Playground/HTML%20documents/artboard-8.html";
+    }
+</script>
+
 </html>
