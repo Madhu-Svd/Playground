@@ -19,7 +19,7 @@
                     <p class="password">Password</p>
                     <input type="password" class="input-box" id="pwd" placeholder="********"><br>
                     <span><input type="checkbox" name="remember" style="margin-top: 3vh">Remember me</span>
-                    <label><a href="#" class="a-href" style="margin-top: 3vh">Forgot Password</a></label><br>
+                    <label><a href="#" class="a-href" style="margin-top: 3vh" onclick="init1()">Forgot Password</a></label><br>
                     <button type="button" class="signup-btn" onclick="init()">LOGIN</button>
                 </fieldset>
             </form>
@@ -32,7 +32,13 @@
         function init(){
            window.location="login-page2.html";
         }
+        
         // alert('Move to Login-Page2');
+    </script>
+    <script>
+        function init1(){
+           window.location="login-page3.html";
+        }
     </script>
 
 </html>

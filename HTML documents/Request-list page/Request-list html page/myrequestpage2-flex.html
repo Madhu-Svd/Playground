@@ -38,17 +38,26 @@
     <div style="min-height: 1vh"></div>
     <div class="request-main">
         <div class="filters">
-            <div><img src="../images/request-icons-01.png" alt="filter-image" id="filter-icon" class="dropbtn"
-                    onclick="myFunction()" role="button" />
-                <div class="approved"><span>FILTER<br></span><span><b>Showing approved requests.</b></span></div>
+            <div class="dropdown">
+                <img src="../images/request-icons-01.png" width="30" height="30" onclick="myFunction()" class="dropbtn">
+                <div id="myDropdown" class="dropdown-content">
+
+                    <p style="color: #B5B5B5">CLEAR</p>
+
+
+                    <p style="color: #5A5A5A">APPROVED</p>
+
+
+                    <p style="color: #5A5A5A">DRAFT</p>
+
+                    <p style="color: #5A5A5A">AWAITING</p>
+
+                    <p style="color: #5A5A5A">REJECTED</p>
+
+                </div>
             </div>
-            <div id="myDropdown" class="dropdown-content">
-                <p style="color: #B5B5B5">CLEAR</p>
-                <p style="color: #5A5A5A">APPROVED</p>
-                <p style="color: #5A5A5A">DRAFT</p>
-                <p style="color: #5A5A5A">AWAITING</p>
-                <p style="color: #5A5A5A">REJECTED</p>
-            </div>
+
+            <div class="approved"><span>FILTER<br></span><span><b>Showing approved requests.</b></span></div>
         </div>
 
         <div class="request1">
@@ -58,11 +67,11 @@
                 <p style="letter-spacing: 0.7px;font-weight: bold">06 Jul 2019</p><br>
             </div>
             <div class="middle">
-                <img src="../images/request-icons-14.png" alt="bell-image" class="bell-icon" />
+                <img src="../images/request-icons-14.png" alt="bell-image" class="bell-icon" onclick="init1()" />
             </div>
             <div class="right">
                 <span style="color: #5A5A5A;font-size: 1.2vw">AWATING APPROVAL</span>
-                 <div class="circle">
+                <div class="circle">
                 </div>
             </div>
         </div>
@@ -127,29 +136,33 @@
     function init() {
         window.location = "file:///F:/madhu%20c%20s/Playground/HTML%20documents/Requisition%20Forms/Requisition-Forms%20HTML%20Page/requisition-form1.html";
     }
-    function myFunction() {
-        window.location = "file:///F:/madhu%20c%20s/Playground/HTML%20documents/artboard-8.html";
-    }
-    
-    /* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-    // function myFunction() {
-    //     document.getElementById("myDropdown").classList.toggle("show");
-    // }
-
-    // Close the dropdown menu if the user clicks outside of it
-    // window.onclick = function (event) {
-    //     if (!event.target.matches('.dropbtn')) {
-    //         var dropdowns = document.getElementsByClassName("dropdown-content");
-    //         var i;
-    //         for (i = 0; i < dropdowns.length; i++) {
-    //             var openDropdown = dropdowns[i];
-    //             if (openDropdown.classList.contains('show')) {
-    //                 openDropdown.classList.remove('show');
-    //             }
-    //         }
-    //     }
-    // }
 </script>
+
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+<script>
+        function init1(){
+           window.location="file:///F:/madhu%20c%20s/Playground/HTML%20documents/Request-list%20page/Request-list%20html%20page/requestpage-request-view.html";
+        }
+    </script>
 
 </html>

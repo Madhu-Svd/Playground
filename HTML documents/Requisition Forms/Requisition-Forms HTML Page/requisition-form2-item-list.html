@@ -3,18 +3,18 @@
 
 <head>
     <title> Request page</title>
-    <link rel="stylesheet" type="text/css" href="../HTML documents/flexbox-12.css">
+    <link rel="stylesheet" type="text/css" href="../Requisition-Forms CSS Page/requisition-form2-item-list.css">
 </head>
 
 <body>
     <div class="header">
         <div class="burger-menu">
-            <img src="images/request-icons-02.png" class="burger-menu-icon" alt="burger-menu" />
+            <img src="../Requisition-Forms images/request-icons-02.png" class="burger-menu-icon" alt="burger-menu" />
         </div>
         <div class="user-menu">
-            <img src="images/profile-picture.png" class="profile-icon" alt="profile-image" />
+            <img src="../Requisition-Forms images/profile-picture.png" class="profile-icon" alt="profile-image" />
             <p style="color: #595959;font-size:12px;">John Doe</p>
-            <img src="images/request-icons-05.png" class="dropdown-icon" alt="dropdown-image" />
+            <img src="../Requisition-Forms images/request-icons-05.png" class="dropdown-icon" alt="dropdown-image" />
         </div>
         <div style="clear: both"></div>
     </div>
@@ -22,7 +22,7 @@
     <div class="main-container">
         <div class="main-container-left">
             <p class="requisition">REQUISITION</p>
-            <img src="images/request-image-31.png" alt="image" class="leftside-image" />
+            <img src="../Requisition-Forms images/request-image-31.png" alt="image" class="leftside-image" />
 
         </div>
         <div class="main-container-right">
@@ -34,7 +34,8 @@
                     </div>
                     <div class="main-header-right">
                         <span style="font-size: 12px;">ADD ITEMS</span>
-                        <img src="images/request-icons-10.png" class="add-icon" alt="button" />
+                        <img src="../Requisition-Forms images/request-icons-10.png" class="add-icon" alt="button"
+                            onclick="init()" />
                     </div>
                     <div style="clear: both"></div>
                 </div>
@@ -47,7 +48,8 @@
                         <div>01</div>
                         <div>10 Jul 2019</div>
                         <div>Rs. 45, 000</div>
-                        <div><img src="images/request-icons-11.png" class="menu-icon" alt="button" /></div>
+                        <div><img src="../Requisition-Forms images/request-icons-11.png" class="menu-icon"
+                                alt="button" /></div>
                     </div>
                     <div style="clear: both"></div>
                 </div>
@@ -60,7 +62,8 @@
                         <div>02</div>
                         <div>10 Jul 2019</div>
                         <div>Rs. 45, 000</div>
-                        <div><img src="images/request-icons-11.png" class="menu-icon" alt="button" /></div>
+                        <div><img src="../Requisition-Forms images/request-icons-11.png" class="menu-icon"
+                                alt="button" /></div>
                     </div>
                     <div style="clear: both"></div>
                 </div>
@@ -73,7 +76,8 @@
                         <div>01</div>
                         <div>10 Jul 2019</div>
                         <div>Rs. 45, 000</div>
-                        <div><img src="images/request-icons-11.png" class="menu-icon" alt="button" /></div>
+                        <div><img src="../Requisition-Forms images/request-icons-11.png" class="menu-icon"
+                                alt="button" /></div>
                     </div>
                     <div style="clear: both"></div>
                 </div>
@@ -86,7 +90,8 @@
                         <div>01</div>
                         <div>10 Jul 2019</div>
                         <div>Rs. 45, 000</div>
-                        <div><img src="images/request-icons-11.png" class="menu-icon" alt="button" /></div>
+                        <div><img src="../Requisition-Forms images/request-icons-11.png" class="menu-icon"
+                                alt="button" /></div>
                     </div>
                     <div style="clear: both"></div>
                 </div>
@@ -97,22 +102,33 @@
                         <div>01</div>
                         <div>10 Jul 2019</div>
                         <div>Rs. 45, 000</div>
-                        <div><img src="images/request-icons-11.png" class="menu-icon" alt="button" /></div>
+                        <div><img src="../Requisition-Forms images/request-icons-11.png" class="menu-icon"
+                                alt="button" /></div>
                     </div>
                     <div style="clear: both"></div>
                 </div>
             </div>
             <div style="min-height: 5vh"></div>
             <div class="footer">
-                <div><a href="#" style="font-size: 12px; font-weight:bold;color: #595959">SAVE DRAFT</a></div>
+                <div><a href="#" style="font-size: 12px; font-weight:bold;color: #595959" onclick="init1()" >SAVE DRAFT</a></div>
                 <div class="footer-right">
                     <div><a href="#" style="font-size: 12px; font-weight:bold;padding-right: 1%">BACK</a></div>
-                    <div><button type="button" class="btn" >NEXT--></button></div>
+                    <div><button type="button" class="btn">NEXT--></button></div>
                 </div>
             </div>
         </div>
     </div>
 
 </body>
+<script>
+    function init() {
+        window.location = "file:///F:/madhu%20c%20s/Playground/HTML%20documents/Requisition%20Forms/Requisition-Forms%20HTML%20Page/requisition-form2-add-item.html";
+    }
+</script>
+<script>
+        function init1(){
+           window.location="file:///F:/madhu%20c%20s/Playground/HTML%20documents/Requisition%20Forms/Requisition-Forms%20HTML%20Page/requisition-form-acknowledgement.html";
+        }
+    </script>
 
 </html>
