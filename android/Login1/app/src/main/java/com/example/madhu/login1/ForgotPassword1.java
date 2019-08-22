@@ -23,26 +23,22 @@ public class ForgotPassword1 extends AppCompatActivity {
         c3=findViewById(R.id.constraintLayout4);
         editText = findViewById(R.id.editText3);
         alertbuilder=new AlertDialog.Builder(this);
+
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (editText.getText().toString().equals("")) {
+                    c3.setVisibility(View.VISIBLE);
+                } else {
 
-            }
-        });
-        if(editText.getText().toString()==" "){
-            c3.setVisibility(View.VISIBLE);
-        }else {
-
-            final View alertView=getLayoutInflater().inflate(R.layout.activity_login1_alert_dialog,null);
-            alertbuilder.setView(alertView);
-            final AlertDialog alertDialog=alertbuilder.create();
-            button2.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+                    final View alertView = getLayoutInflater().inflate(R.layout.activity_login1_alert_dialog, null);
+                    alertbuilder.setView(alertView);
+                    final AlertDialog alertDialog = alertbuilder.create();
                     alertDialog.show();
                 }
-            });
-        }
+            }
+        });
+
 
 
 

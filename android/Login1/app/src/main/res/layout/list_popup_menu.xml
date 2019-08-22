@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popupmenu"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:text="TextView"
+    android:textSize="12dp"
+    android:textColor="#717070"
+    android:background="#ffffff"
+    android:padding="5dp"
+    >
+
+</TextView>

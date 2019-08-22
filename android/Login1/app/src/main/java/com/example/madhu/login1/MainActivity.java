@@ -15,18 +15,36 @@ public class MainActivity extends AppCompatActivity {
     Button button;
     ConstraintLayout c1,c2;
     TextView forgotpwd;
-//    AlertDialog.Builder alertbuilder;
+    EditText email,password;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         button = findViewById(R.id.button);
+        forgotpwd = findViewById(R.id.textView2);
         c1=findViewById(R.id.constraintLayout2);
         c2= findViewById(R.id.constraintLayout3);
-        //        alertbuilder=new AlertDialog.Builder(this);
+        email=findViewById(R.id.editText);
+        password=findViewById(R.id.editText3);
 
-        forgotpwd = findViewById(R.id.textView2);
+        button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if (email.getText().toString().equals("") && password.getText().toString().equals("")) {
+                        c1.setVisibility(View.VISIBLE);
+                        c2.setVisibility(View.VISIBLE);
+                    }
+                    else{
+                    Intent intent=new Intent(getApplicationContext(),RequestPage_BurgerMenu.class);
+                    startActivity(intent);
+                }
+            }
+
+        });
+
         forgotpwd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,25 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-//        if(editText2.getText().toString()==""){
-//
-//        }else {
-//
-//        }
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                c1.setVisibility(View.VISIBLE);
-                c2.setVisibility(View.VISIBLE);
-////                editText2.setVisibility(View.VISIBLE);
-//                final View alertView=getLayoutInflater().inflate(R.layout.activity_login1_alert_dialog,null);
-//                alertbuilder.setView(alertView);
-//                final AlertDialog alertDialog=alertbuilder.create();
-//                alertDialog.show();
 
-            }
-
-        });
 
 
     }

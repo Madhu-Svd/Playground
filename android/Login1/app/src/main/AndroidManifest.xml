@@ -18,7 +18,11 @@
         </activity>
         <activity android:name=".ForgotPassword1" />
         <activity android:name=".ForgotPassword2" />
-        <activity android:name=".Login1AlertDialog"></activity>
+        <activity android:name=".Login1AlertDialog" />
+        <activity
+            android:name=".RequestPage_BurgerMenu"
+            android:label="@string/title_activity_request_page__burger_menu"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
