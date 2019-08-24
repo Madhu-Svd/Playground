@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -31,13 +32,21 @@ public class RequestPage_BurgerMenu extends AppCompatActivity
         setContentView(R.layout.activity_request_page__burger_menu);
 
         ImageView filter_image =(ImageView) findViewById(R.id.filter_icon);
+        ImageView bell_image=(ImageView) findViewById(R.id.imageView7);
         listPopupWindow=new android.widget.ListPopupWindow(getApplicationContext());
         final TextView listpopup=(TextView)findViewById(R.id.popupmenu);
-        ListView listView=(ListView)findViewById(R.id.requestList);
-        String[] items_list={"CLEAR","APPROVED","AWATING","DRAFT","REJECTED"};
-        String[] items={"CLEAR","APPROVED","AWATING","DRAFT","REJECTED"};
+        listView=findViewById(R.id.requestList);
+//        String[] items_list={"CLEAR","APPROVED","AWATING","DRAFT","REJECTED"};
 
-        ArrayAdapter adapter=new ArrayAdapter(getApplicationContext(),R.layout.content_request_page__burger_menu,items_list);
+        String[] items={"CLEAR","APPROVED","AWATING","DRAFT","REJECTED"};
+        String items_title[]={"PUR - 2019 - 056","PUR - 2019 - 056","PUR - 2019 - 056","PUR - 2019 - 056"};
+        String items_date[]={"06 Jul 2019","06 Jul 2019","06 Jul 2019","06 Jul 2019"};
+        String items_status[]={"APPROVED","APPROVED","APPROVED","APPROVED"};
+//        String statusColors
+        ListAdapter adapter=new MyListAdapter(getApplicationContext(),items_title,items_date,items_status);
+        listView.setAdapter(adapter);
+
+//        ListAdapter adapter=new ArrayAdapter<>(getApplicationContext(),R.layout.list_popup_menu,items_list);
 //        listView.setAdapter(adapter);
         listPopupWindow.setAdapter(new ArrayAdapter(getApplicationContext(),R.layout.list_popup_menu,items));
         listPopupWindow.setAnchorView(filter_image);
