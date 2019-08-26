@@ -48,7 +48,7 @@
                                 like pdf, docx, ppt, xls etc are allowed.</span>
                         </div>
                         <div style="padding: 3%">
-                            <button type="button" style="border-radius: 4px" onclick="init()">BROWSE</button>
+                            <button type="button" style="border-radius: 4px" >BROWSE</button>
                         </div>
                     </div>
                     <div class="right">
@@ -69,7 +69,7 @@
                             <td>abc0037429023.doc</td>
                             <td>976KB</td>
                             <th rowspan="2">
-                                <div><button type="button">UPLOAD</button></div>
+                                <div><button type="button" onclick="init()">UPLOAD</button></div>
                             </th>
                         </tr>
                         <tr class="row2">
@@ -84,10 +84,10 @@
             </div>
             <div style="min-height: 20vh"></div>
             <div class="footer">
-                <div><a href="#" style="font-size: 12px; font-weight:bold;color: #595959">SAVE DRAFT</a></div>
+                <div><a href="#" style="font-size: 12px; font-weight:bold;color: #595959" onclick="savedraft()">SAVE DRAFT</a></div>
                 <div class="footer-right">
-                    <div><a href="#" style="font-size: 12px; font-weight:bold;padding-right: 1%">BACK</a></div>
-                    <div><button type="button">NEXT--></button></div>
+                    <div><a href="#" style="font-size: 12px; font-weight:bold;padding-right: 1%" onclick="back()">BACK</a></div>
+                    <div><button type="button" onclick="next()">NEXT--></button></div>
                 </div>
             </div>
 
@@ -98,7 +98,22 @@
 </body>
 <script>
         function init(){
-           window.location="file:///F:/madhu%20c%20s/Playground/HTML%20documents/Requisition%20Forms/Requisition-Forms%20HTML%20Page/requisition-form3-dis-uploaded-files.html";
+           window.location="requisition-form3-dis-uploaded-files.html";
         }
     </script>
+     <script>
+            function back(){
+               window.location="requisition-form2-item-list.html";
+            }
+        </script>
+    <script>
+            function next(){
+               window.location="requisition-form4-invite-people.html";
+            }
+        </script>
+    <script>
+            function savedraft(){
+                window.location = "requisition-form-acknowledgement.html";
+            }
+        </script>
 </html>

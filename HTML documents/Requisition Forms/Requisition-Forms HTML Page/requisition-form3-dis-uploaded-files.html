@@ -40,28 +40,29 @@
 
                 <div style="min-height: 8vh"></div>
                 <div class="browse">
-                    <div class="left">
-                        <div>
-                            <p style="font-size: 1vw;font-weight:bold">Select a file from my computer.</p>
-                            <span style="font-size: 0.8vw"> Maximum allowed size is 5MB per file. Only documents
-                                like pdf, docx, ppt, xls etc are allowed.</span>
-                        </div>
-                        <div style="padding: 3%">
-                            <button type="button" style="border-radius: 4px">BROWSE</button>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <div class="right-div">
-                            <div class="right-sub">
-                                <img src="../Requisition-Forms images/request-icons-06.png" class="cloud-icon"
-                                    alt="cloud-image" />
-                                <div> <span style="font-size: 0.8vw"> Drop a file here</span></div>
+                        <div class="left">
+                            <div>
+                                <p style="font-size: 1vw;font-weight:bold">Select a file from my computer.</p>
+                                <span style="font-size: 0.8vw"> Maximum allowed size is 5MB per file. Only documents
+                                    like pdf, docx, ppt, xls etc are allowed.</span>
                             </div>
-                            <div style="clear: both"></div>
+                            <div style="padding: 3%">
+                                <button type="button" style="border-radius: 4px" >BROWSE</button>
+                            </div>
                         </div>
+                        <div class="right">
+                            <div class="right-div">
+                                <div class="right-sub">
+                                    <img src="../Requisition-Forms images/request-icons-06.png" class="cloud-icon"
+                                        alt="cloud-image" />
+                                    <div> <span style="font-size: 0.8vw"> Drop a file here</span></div>
+                                </div>
+                                <div style="clear: both"></div>
+                            </div>
+                        </div>
+                        <div style="clear: both"></div>
                     </div>
-                    <div style="clear: both"></div>
-                </div>
+
                 <div style="min-height: 8vh"></div>
                 <div class="uploaded-file1">
                     <table style="border: red">
@@ -99,10 +100,10 @@
             </div>
             <div style="min-height: 7vh"></div>
             <div class="footer">
-                <div><a href="#" style="font-size: 12px; font-weight:bold;color: #595959">SAVE DRAFT</a></div>
+                <div><a href="#" style="font-size: 12px; font-weight:bold;color: #595959" onclick="savedraft()">SAVE DRAFT</a></div>
                 <div class="footer-right">
-                    <div><a href="#" style="font-size: 12px; font-weight:bold;padding-right: 1%">BACK</a></div>
-                    <div><button type="button">NEXT--></button></div>
+                    <div><a href="#" style="font-size: 12px; font-weight:bold;padding-right: 1%" onclick="back()">BACK</a></div>
+                    <div><button type="button" onclick="next()" >NEXT--></button></div>
                 </div>
             </div>
 
@@ -111,5 +112,20 @@
     </div>
 
 </body>
+<script>
+        function savedraft(){
+           window.location="requisition-form-acknowledgement.html";
+        }
+    </script>
+<script>
+        function next(){
+           window.location="requisition-form4-invite-people.html";
+        }
+    </script>
+    <script>
+            function back(){
+               window.location="requisition-form2-item-list.html";
+            }
+        </script>
 
 </html>

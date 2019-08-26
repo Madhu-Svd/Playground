@@ -62,7 +62,7 @@ body{
     transform: rotate(-180deg);
     position: absolute;
     left:5.3%;
-    top: 38%;
+    top: 36%;
 }
 .dropdown-icons{
     width: 30px;
@@ -98,7 +98,7 @@ body{
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
+    background: #245070 0% 0% no-repeat padding-box;
     border: 0.5px solid #245070;
     border-radius: 7px;
     text-align: center;
@@ -109,7 +109,7 @@ body{
     border-radius: 7px;
     font-size: 12px;
     font-weight: bold;
-    background: #245070 0% 0% no-repeat padding-box;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 0.5px solid #245070;
     text-align: center;
     font-family:  Roboto;
@@ -167,7 +167,7 @@ body{
 }
 .middle1 .left-vertical-line{
     width: 3px;
-    height: 123%;
+    height: 120%;
     background: #F7F7F7 0% 0% no-repeat padding-box;
     box-shadow:0 0 3px #747474; 
     transform: rotate(-180deg);

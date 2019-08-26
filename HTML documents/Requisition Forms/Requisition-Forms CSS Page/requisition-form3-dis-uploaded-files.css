@@ -88,13 +88,14 @@ body{
    border: 1px solid #F0F0F0;
 }
 .browse{
-    width: 80%;
+    width: 60%;
     margin-left: 5%;
     margin-right: 20%;
     background: #32BDD2 0% 0% no-repeat padding-box;
 }
 
 .left{
+    width:50%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -109,7 +110,7 @@ body{
 .right{
     background: #32BDD2 0% 0% no-repeat padding-box;
     border: 1px solid #32BDD2;
-    width: 40%;
+    width: 50%;
     float: right;
 } 
 .right-div{
@@ -117,7 +118,7 @@ body{
     width: 80%;
     height: 10%;
     margin: auto;
-    margin-top: 6%;
+    margin-top: 8%;
     border: 2px dashed #FFFFFF;
     background-color: #32BDD2;
     border-radius: 4px;
@@ -133,6 +134,7 @@ body{
     width: 33px;
     height: 33px;
 }
+
 .uploaded-file1{
     margin-left: 5%;
     margin-right: 62%;
@@ -186,6 +188,6 @@ button{
     font-size: 12px;
     font-weight: bold;
     padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }

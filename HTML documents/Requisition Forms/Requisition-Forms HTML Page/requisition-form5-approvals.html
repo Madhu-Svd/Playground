@@ -33,7 +33,7 @@
                     </div>
                     <div class="main-header-right">
                         <span style="font-size: 1vw;font-weight: bold">ADD APPROVER</span>
-                        <img src="../Requisition-Forms images/request-icons-10.png" class="add-icon" alt="button" />
+                        <img src="../Requisition-Forms images/request-icons-10.png" class="add-icon" alt="button" onclick="addapprover()" />
                     </div>
                     <div style="clear: both"></div>
                 </div>
@@ -84,10 +84,10 @@
             </div>
             <div style="min-height: 30vh"></div>
             <div class="footer">
-                <div><a href="#" style="font-size: 12px; font-weight:bold;color: #595959">SAVE DRAFT</a></div>
+                <div><a href="#" style="font-size: 12px; font-weight:bold;color: #595959" onclick="savedraft()">SAVE DRAFT</a></div>
                 <div class="footer-right">
-                    <div><a href="#" style="font-size: 12px; font-weight:bold;padding-right: 1%">BACK</a></div>
-                    <div><button type="button">NEXT--></button></div>
+                    <div><a href="#" style="font-size: 12px; font-weight:bold;padding-right: 1%" onclick="back()">BACK</a></div>
+                    <div><button type="button" onclick="next()">NEXT--></button></div>
                 </div>
             </div>
         </div>
@@ -95,5 +95,25 @@
     </div>
 
 </body>
+<script>
+        function addapprover(){
+           window.location="requisition-form4-add-people.html";
+        }
+    </script>
+<script>
+        function savedraft(){
+           window.location="requisition-form-acknowledgement.html";
+        }
+    </script>
+<script>
+        function next(){
+           window.location="requisition-form6-preview.html";
+        }
+    </script>
+    <script>
+            function back(){
+               window.location="requisition-form4-invite-people.html";
+            }
+        </script>
 
 </html>
