@@ -1,5 +1,6 @@
 package com.example.madhu.login1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -24,13 +26,14 @@ public class RequestPage_BurgerMenu extends AppCompatActivity
 
          android.widget.ListPopupWindow listPopupWindow;
          ListView listView;
+         Button newrequest;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request_page__burger_menu);
-
+        newrequest=findViewById(R.id.button3);
         ImageView filter_image =(ImageView) findViewById(R.id.filter_icon);
         ImageView bell_image=(ImageView) findViewById(R.id.imageView7);
         listPopupWindow=new android.widget.ListPopupWindow(getApplicationContext());
@@ -56,6 +59,13 @@ public class RequestPage_BurgerMenu extends AppCompatActivity
             @Override
             public void onClick(View v) {
             listPopupWindow.show();
+            }
+        });
+        newrequest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),RecyclerViewActivity.class);
+                startActivity(intent);
             }
         });
 
