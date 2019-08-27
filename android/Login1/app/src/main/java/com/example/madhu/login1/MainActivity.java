@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 if (email.getText().toString().equals("")) {
 //                        && password.getText().toString().equals("")) {
                         c1.setVisibility(View.VISIBLE);
-//                        c2.setVisibility(View.VISIBLE);
+                        c2.setVisibility(View.VISIBLE);
                     }
                     else{
                     Intent intent=new Intent(getApplicationContext(),RequestPage_BurgerMenu.class);
