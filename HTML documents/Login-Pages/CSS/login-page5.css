@@ -5,10 +5,11 @@
 }
 body{
     background: #000000 0% 0% no-repeat padding-box;
+    font-family: Roboto;
 }
 
 .child-container-sub{
-    width: 30vw;
+    width: 32vw;
     height: 15vw;
     margin: auto;
     box-shadow: 0px 0px 5px #d3d3d3; 

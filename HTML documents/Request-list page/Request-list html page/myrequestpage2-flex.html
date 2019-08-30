@@ -31,7 +31,7 @@
             <img src="../images/request-icons-03.png" class="search-icon" alt="search-image" />
         </div>
         <div>
-            <button type="button" class="button" onclick="init()">NEW REQUEST</button>
+            <button type="button" class="button" onclick="NewRequest_btn()">NEW REQUEST</button>
         </div>
     </div>
 
@@ -60,14 +60,14 @@
             <div class="approved"><span>FILTER<br></span><span><b>Showing approved requests.</b></span></div>
         </div>
 
-        <div class="request1">
+        <div class="request1" onclick="first_row()">
             <div class="left">
                 <p style="letter-spacing: 1.4px;font-weight: bold">PUR-2019-056</p><br>
                 <p style="font-size: 1vw;letter-spacing: 0.6px">Submitted on</p>
                 <p style="letter-spacing: 0.7px;font-weight: bold">06 Jul 2019</p><br>
             </div>
             <div class="middle">
-                <img src="../images/request-icons-14.png" alt="bell-image" class="bell-icon" onclick="init1()" />
+                <img src="../images/request-icons-14.png" alt="bell-image" class="bell-icon"/>
             </div>
             <div class="right">
                 <span style="color: #5A5A5A;font-size: 1.2vw">AWATING APPROVAL</span>
@@ -133,8 +133,8 @@
     </div>
 </body>
 <script>
-    function init() {
-        window.location = "file:///F:/madhu%20c%20s/Playground/HTML%20documents/Requisition%20Forms/Requisition-Forms%20HTML%20Page/requisition-form1.html";
+    function NewRequest_btn() {
+        window.location = "../../Requisition Forms/Requisition-Forms HTML Page/requisition-form1.html";
     }
 </script>
 
@@ -160,8 +160,8 @@
     }
 </script>
 <script>
-        function init1(){
-           window.location="file:///F:/madhu%20c%20s/Playground/HTML%20documents/Request-list%20page/Request-list%20html%20page/requestpage-request-view.html";
+        function first_row(){
+           window.location="./requestpage-request-view.html";
         }
     </script>
 
