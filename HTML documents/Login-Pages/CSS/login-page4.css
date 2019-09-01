@@ -19,7 +19,7 @@ body{
     box-shadow: 0px 0px 10px #d3d3d3;  
 } 
 .child-container-sub{
-    width: 30vw;
+    width: 35vw;
     margin: auto;
 }
 
@@ -49,7 +49,6 @@ body{
     font-weight: bold;
     color: #FFFFFF;   
 }
-
 .tri{
     height: 0;
     width: 0;
@@ -57,7 +56,30 @@ body{
     border-right: 8px solid transparent;
    border-bottom: 12px solid #dd0606;
    float: left;
-   
+}
+.forgotpwd-popup{
+    position: absolute;
+    left: 32%;
+    display: none;
+   }
+.child-container-sub-popup{
+    width: 32vw;
+    height: 15vw;
+    margin: auto;
+    box-shadow: 0px 0px 5px #d3d3d3; 
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    padding: 4vw;
+    opacity: 1;
+}
+.forgot-password-popup{
+    color: #595959;
+    font-size: 1.2vw;
+}
+p{
+    color: #747474;
+    font: Regular Gibson;
+    letter-spacing: 0.6px;
+    opacity: 1;
 }
 
 

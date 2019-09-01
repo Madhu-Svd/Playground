@@ -30,11 +30,11 @@
                 <div class="main-header">
                     <div class="main-header-left">
                         <p><b>INVITE PEOPLE</b><br>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></p>
                     </div>
                     <div class="main-header-right">
                         <span style="font-size: 1vw;font-weight: bold">ADD PEOPLE</span>
-                        <img src="../Requisition-Forms images/request-icons-10.png" class="add-icon" alt="button" onclick="addpeople()"/>
+                        <img src="../Requisition-Forms images/request-icons-10.png" class="add-icon" alt="button" id="addpeople"/>
                     </div>
                     <div style="clear: both"></div>
                 </div>
@@ -111,23 +111,306 @@
             <div class="footer">
                 <div><a href="#" style="font-size: 12px; font-weight:bold;color: #595959" onclick="savedraft()">SAVE DRAFT</a></div>
                 <div class="footer-right">
-                    <div><a href="#" style="font-size: 12px; font-weight:bold;padding-right: 1%" onclick="back()">BACK</a></div>
+                    <div><a href="#" style="font-size: 12px; font-weight:bold;padding-right: 1%;color: #32BDD2" onclick="back()">BACK</a></div>
                     <div><button type="button" onclick="next()">NEXT--></button></div>
                 </div>
             </div>
         </div>
         <div style="clear: both"></div>
     </div>
+    <div class="mainpop">
+
+        <div class="top">
+            <div>
+                <p><b>Add People</b></p>
+            </div>
+            <div><img src="../Requisition-Forms images/request-icons-13.png" class="cancel-icon" alt="cancel-image" >
+            </div>
+        </div>
+
+        <div class="middle">
+            <div class="search-box">
+                <input class="search-text" type="text" placeholder="search...">
+                <img src="../Requisition-Forms images/request-icons-03.png" class="search-icon" alt="search-image" />
+            </div>
+
+            <div style="min-height: 15vh"></div>
+            <div class="profiles">
+                <div class="first-invite">
+                    <div class="first-invite1">
+                        <div class=" image">
+                            <img src="../Requisition-Forms images/profile-picture.png" class="profile-icon"
+                                alt="profile-image" />
+                        </div>
+                        <div class="name">
+                            <div>
+                                <p>Luke Ray</p>
+                            </div>
+                            <div>
+                                <span>Lorem ipsum doler sit amet.</span>
+                            </div>
+                        </div>
+                        <div class=" image">
+                            <img src="../Requisition-Forms images/request-icons-10.png" class="add-icon" id="addfirstpeople"
+                                alt="add-image" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="first-invite">
+                    <div class="first-invite1">
+                        <div class=" image">
+                            <img src="../Requisition-Forms images/profile-picture.png" class="profile-icon"
+                                alt="profile-image" />
+                        </div>
+                        <div class="name">
+                            <div>
+                                <p>Daisy Lake</p>
+                            </div>
+                            <div>
+                                <span>Lorem ipsum doler sit amet.</span>
+                            </div>
+                        </div>
+                        <div class=" image">
+                                <img src="../Requisition-Forms images/request-icons-10.png" class="add-icon"
+                                alt="add-image" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="first-invite">
+                    <div class="first-invite1">
+                        <div class=" image">
+                            <img src="../Requisition-Forms images/profile-picture.png" class="profile-icon"
+                                alt="profile-image" />
+                        </div>
+                        <div class="name">
+                            <div>
+                                <p>Mark Smith</p>
+                            </div>
+                            <div>
+                                <span>Lorem ipsum doler sit amet.</span>
+                            </div>
+                        </div>
+                        <div class=" image">
+                                <img src="../Requisition-Forms images/request-icons-10.png" class="add-icon"
+                                alt="add-image" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="first-invite">
+                    <div class="first-invite1">
+                        <div class=" image">
+                            <img src="../Requisition-Forms images/profile-picture.png" class="profile-icon"
+                                alt="profile-image" />
+                        </div>
+                        <div class="name">
+                            <div>
+                                <p>Harry Weasley</p>
+                            </div>
+                            <div>
+                                <span>Lorem ipsum doler sit amet.</span>
+                            </div>
+                        </div>
+                        <div class=" image">
+                                <img src="../Requisition-Forms images/request-icons-10.png" class="add-icon"
+                                alt="add-image" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="first-invite">
+                    <div class="first-invite1">
+                        <div class=" image">
+                            <img src="../Requisition-Forms images/profile-picture.png" class="profile-icon"
+                                alt="profile-image" />
+                        </div>
+                        <div class="name">
+                            <div>
+                                <p>Mark Smith</p>
+                            </div>
+                            <div>
+                                <span>Lorem ipsum doler sit amet.</span>
+                            </div>
+                        </div>
+                        <div class=" image">
+                                <img src="../Requisition-Forms images/request-icons-10.png" class="add-icon"
+                                alt="add-image" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div style="min-height: 12vh"></div>
+        </div>
+     
+        <div class="bottom">
+            <div style="width:10%"><a href="#">CANCEL</a></div>
+            <div style="border:1px dashed #32BDD2;border-radius: 20px; text-align: center"><span>You haven't selected any person</span><button type="button">DONE</button></div>
+        </div>
+
+    </div>
+
+
+    <div class="mainpop-person-selected">
+
+            <div class="top">
+                <div>
+                    <p><b>Add People</b></p>
+                </div>
+                <div><img src="../Requisition-Forms images/request-icons-13.png" class="cancel-icon" alt="cancel-image" >
+                </div>
+            </div>
+    
+            <div class="middle">
+                <div class="search-box">
+                    <input class="search-text" type="text" placeholder="search...">
+                    <img src="../Requisition-Forms images/request-icons-03.png" class="search-icon" alt="search-image" />
+                </div>
+    
+                <div style="min-height: 15vh"></div>
+                <div class="profiles">
+                    <div class="first-invite">
+                        <div class="first-invite1">
+                            <div class=" image">
+                                <img src="../Requisition-Forms images/profile-picture.png" class="profile-icon"
+                                    alt="profile-image" />
+                            </div>
+                            <div class="name">
+                                <div>
+                                    <p>Luke Ray</p>
+                                </div>
+                                <div>
+                                    <span>Lorem ipsum doler sit amet.</span>
+                                </div>
+                            </div>
+                            <div class=" image">
+                                <img src="../Requisition-Forms images/request-icons-09.png"  class="minus-icon"
+                                    alt="minus-image" id="addicon"/>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="first-invite">
+                        <div class="first-invite1">
+                            <div class=" image">
+                                <img src="../Requisition-Forms images/profile-picture.png" class="profile-icon"
+                                    alt="profile-image" />
+                            </div>
+                            <div class="name">
+                                <div>
+                                    <p>Daisy Lake</p>
+                                </div>
+                                <div>
+                                    <span>Lorem ipsum doler sit amet.</span>
+                                </div>
+                            </div>
+                            <div class=" image">
+                                    <img src="../Requisition-Forms images/request-icons-10.png" class="add-icon"
+                                    alt="add-image" />
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="first-invite">
+                        <div class="first-invite1">
+                            <div class=" image">
+                                <img src="../Requisition-Forms images/profile-picture.png" class="profile-icon"
+                                    alt="profile-image" />
+                            </div>
+                            <div class="name">
+                                <div>
+                                    <p>Mark Smith</p>
+                                </div>
+                                <div>
+                                    <span>Lorem ipsum doler sit amet.</span>
+                                </div>
+                            </div>
+                            <div class=" image">
+                                    <img src="../Requisition-Forms images/request-icons-10.png" class="add-icon"
+                                    alt="add-image" />
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="first-invite">
+                        <div class="first-invite1">
+                            <div class=" image">
+                                <img src="../Requisition-Forms images/profile-picture.png" class="profile-icon"
+                                    alt="profile-image" />
+                            </div>
+                            <div class="name">
+                                <div>
+                                    <p>Harry Weasley</p>
+                                </div>
+                                <div>
+                                    <span>Lorem ipsum doler sit amet.</span>
+                                </div>
+                            </div>
+                            <div class=" image">
+                                    <img src="../Requisition-Forms images/request-icons-10.png" class="add-icon"
+                                    alt="add-image" />
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="first-invite">
+                        <div class="first-invite1">
+                            <div class=" image">
+                                <img src="../Requisition-Forms images/profile-picture.png" class="profile-icon"
+                                    alt="profile-image" />
+                            </div>
+                            <div class="name">
+                                <div>
+                                    <p>Mark Smith</p>
+                                </div>
+                                <div>
+                                    <span>Lorem ipsum doler sit amet.</span>
+                                </div>
+                            </div>
+                            <div class=" image">
+                                    <img src="../Requisition-Forms images/request-icons-10.png" class="add-icon"
+                                    alt="add-image" />
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div style="min-height: 12vh"></div>
+            </div>
+         
+            <div class="bottom">
+                <div style="width:10%"><a href="#">CANCEL</a></div>
+                <div style="border:1px dashed #32BDD2;border-radius: 20px; text-align: center"><span>1 person selected</span><button type="button">DONE</button></div>
+            </div>
+    
+        </div>
 
 </body>
 <script>
-        function addpeople(){
-           window.location="requisition-form4-add-people.html";
-        }
+      document.getElementById("addpeople").addEventListener("click",function(){
+                document.querySelector(".mainpop").style.display="block";
+         })
+         document.querySelector(".mainpop").addEventListener("click",function(){
+             document.querySelector(".mainpop").style.display="none";
+         })
+         document.getElementById("addfirstpeople").addEventListener("click",function(){
+                document.querySelector(".mainpop-person-selected").style.display="block";
+         })
+         document.querySelector(".mainpop-person-selected").addEventListener("click",function(){
+             document.querySelector(".mainpop-person-selected").style.display="none";
+         })
+         document.getElementById("addicon").addEventListener("click",function(){
+                document.querySelector(".mainpop").style.display="block";
+         })
+         document.querySelector(".mainpop").addEventListener("click",function(){
+             document.querySelector(".mainpop").style.display="none";
+         })
     </script>
 <script>
         function savedraft(){
-           window.location="requisition-form-acknowledgement.html";
+           window.location="requisition-form4-invite-people-ack.html";
         }
     </script>
 <script>

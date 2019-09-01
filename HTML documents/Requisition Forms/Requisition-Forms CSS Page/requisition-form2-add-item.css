@@ -65,7 +65,7 @@ html body{
     color: #747474;
 }
 .three-second-div{
-    width: 54%;
+    margin-right: 40%;
     display: flex;
     align-items: center;
     justify-content: space-between;  

@@ -30,21 +30,30 @@
                 <div class="main-header">
                     <div class="main-header-left">
                         <p><b>ITEMS</b><br>
-                            ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></p>
                     </div>
                     <div class="main-header-right">
                         <span style="font-size: 12px;">ADD ITEMS</span>
-                        <img src="../Requisition-Forms images/request-icons-10.png" class="add-icon" alt="button"
-                            onclick="additems()" />
+                        <img src="../Requisition-Forms images/request-icons-10.png" class="popup" alt="button"
+                            id="image" />
                     </div>
                     <div style="clear: both"></div>
                 </div>
 
                 <div class="items1">
                     <div class="items-list1">
-                        <div>IBM ThinkServer TS15 Tower Server with<br>Max. Processor 1 x Intel <br> E3-1225 v5"(3.3 GHz
-                            /Cache 8 MB).<br><br>
-                            <button type="button" value="READ MORE"><b>READ MORE</b></button></div>
+                        <div>
+                            <p>IBM ThinkServer TS15 Tower Server with<br>Max. Processor 1 x Intel <br>E3-1225 v5"(3.3
+                                GHz
+                                /Cache 8 MB).<span id="dots">...<br></span><span id="more"><br>STD MEMORY 8GB X1/MAX.
+                                    MEMORY<br> 64GB 4 Slots/HARD DRIVE 1X SATA<br>3.5" 7.2k SATA/STD.HDD
+                                    BAY/<br>
+                                    bay MAX. HDD BAY upto 4 x 3.5" +1<br> x 2.5" bay/ OPTICAL Multi
+                                    Burner<br>/Integrated
+                                    RAID<br> 0,1,5,10 (RAID 121i).</span></p><br>
+                            <button type="button" value="READ MORE" onclick="readMore()" id="readmorebtn"><b>READ
+                                    MORE</b></button>
+                        </div>
                         <div>01</div>
                         <div>10 Jul 2019</div>
                         <div>Rs. 45, 000</div>
@@ -65,13 +74,15 @@
 
                 <div class="items1">
                     <div class="items-list2">
-                        <div>Lenovo ThinkServer TS450(PN:70M2001)<br>Processor 1x Intel Xeon E3<br> E3-1225v5"(3.3 GHz
-                            /Cache 8 MB) <br><br>
-                            <button type="button" value="READ MORE"><b>READ MORE</b></button></div>
+                        <div>
+                            <p>Lenovo ThinkServer TS450(PN:70M2001)<br>Processor 1x Intel Xeon E3<br> E3-1225v5"(3.3 GHz
+                                /Cache 8 MB)</p> <br>
+                            <button type="button" value="READ MORE" ><b>READ MORE</b></button>
+                        </div>
                         <div>02</div>
                         <div>10 Jul 2019</div>
                         <div>Rs. 45, 000</div>
-                        <div><img src="../Requisition-Forms images/request-icons-11.png" class="menu-icon"
+                        <div><img src="../Requisition-Forms images/request-icons-11.png" class="menu-icon" 
                                 alt="button" /></div>
                     </div>
                     <div style="clear: both"></div>
@@ -124,21 +135,87 @@
                 <div class="footer-right">
                     <div><a href="#" style="font-size: 12px; font-weight:bold;padding-right: 1%;color: #32BDD2"
                             onclick="back()">BACK</a></div>
-                    <div><button type="button" class="btn" onclick="next()">NEXT--></button></div>
+                    <div><button type="button" class="btn" onclick="next()"><b>NEXT--></b></button></div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="mainpop">
+
+        <div class="top">
+            <div>
+                <p><b>Add Item</b></p>
+            </div>
+            <div><img src="../Requisition-Forms images/request-icons-13.png" class="cancel-icon" alt="cancel-image">
+            </div>
+        </div>
+
+        <div class="middle">
+
+            <div class="one">
+                <div><span>DESCRIPTION</span></div>
+                <div><textarea rows="5" cols="25"></textarea></div>
+            </div>
+
+            <div class="two">
+                <div><span>QTY</span></div>
+                <div><input type="text"></div>
+            </div>
+
+            <div class="three">
+                <div><span>FULLFILLMENT DUE DATE</span></div>
+                <div class="three-second-div">
+                    <div><input type="text"></div>
+                    <div><img src="../Requisition-Forms images/request-icons-17.png" class="box-icon" alt="box-image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="four">
+                <div><span>APPROXIMATE DATE</span></div>
+                <div><input type="text"></div>
+            </div>
+
+        </div>
+
+        <div class="bottom">
+            <div><a href="#">CANCEL</a></div>
+            <div><button type="button">DONE</button></div>
+        </div>
+
+    </div>
+
 </body>
 <script>
-    function additems() {
-        window.location = "./requisition-form2-add-item.html";
+    document.getElementById("image").addEventListener("click", function () {
+        document.querySelector(".mainpop").style.display = "block";
+    })
+    document.querySelector(".mainpop").addEventListener("click", function () {
+        document.querySelector(".mainpop").style.display = "none";
+    })
+
+</script>
+<script>
+    function readMore() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("readmorebtn");
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "READ MORE";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "READ LESS";
+            moreText.style.display = "inline";
+        }
     }
 </script>
 <script>
     function savedraft() {
-        window.location = "./requisition-form-acknowledgement.html";
+        window.location = "./requisition-form2-item-list-ack.html";
     }
 </script>
 <script>
@@ -172,4 +249,5 @@
         }
     }
 </script>
-</html >
+
+</html>

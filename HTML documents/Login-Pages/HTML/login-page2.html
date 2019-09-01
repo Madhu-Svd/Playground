@@ -12,33 +12,32 @@
     <div class="main-container">
         <div class="child-container">
             <form>
-                <!-- <div style="min-height: 20vh"></div> -->
                 <fieldset>
                     <label class="login"><u><b>LOGIN</b></u></label><br>
                     <p class="email">Email or Username</p>
                     <input type="email" class="input-box" id="email"><br>
-                    <div class="tri">!</div>
-                    <p style="color:red;padding: 1vh;font-size: 1vw">This field is required</p><br>
+                    <span style="color:red;font-size: 1vw"><img src="../../images/request-icons-07.png" width="15" height="15">This field is required</span><br>
                     <p class="password">Password</p>
-                    <input type="password" class="input-box" id="pwd" placeholder="********"><br>
-                    <div class="tri">!</div>
-                    <p style="color:red;padding: 1vh;font-size: 1vw">This field is required</p><br>
-                    <span><input type="checkbox" name="remember">Remember me</span>
+                    <input type="password" class="input-box" id="pwd"  placeholder="********"><br>
+                    <span style="color:red;font-size: 1vw"><img src="../../images/request-icons-07.png" width="15" height="15">This field is required</span><br>
+                    <input type="checkbox" name="remember"><span>Remember me</span>
                     <label><a href="#" class="a-href" onclick="forgotpwd()">Forgot Password</a></label><br>
                     <button type="button" class="signup-btn" onclick="login()">LOGIN</button>
                 </fieldset>
             </form>
         </div>
     </div>
-
 </body>
+
 <script>
-        function login(){
-            window.location="../../Request-list page/Request-list html page/myrequestpage2-flex.html";
-        }
-        function forgotpwd(){
-           window.location="login-page3.html";
-        }
+    function login()
+    {
+        window.location = "../../Request-list page/Request-list html page/myrequestpage2-flex.html";
+    }
+    function forgotpwd() 
+    {
+        window.location = "./login-page3.html";
+    }
 </script>
 
 </html>

@@ -96,7 +96,6 @@ body{
     margin-left: 10%;
     border-left:1px solid black;
 }
-
 .text{
     font-size: 1vw;
     position: relative;
@@ -110,7 +109,6 @@ body{
     border-radius: 50%;
     border:1px solid black;
     background-color: #FFFFFF;
-  
 }
 .main-circle1{
     position:absolute;
@@ -120,7 +118,6 @@ body{
     border-radius: 50%;
     border:1px solid black;
     background-color: #FFFFFF;
-  
 }
 .main-circle2{
     position:absolute;
@@ -130,7 +127,6 @@ body{
     border-radius: 50%;
     border:1px solid black;
     background-color: #FFFFFF;
-  
 }
  .sub-header{
     width: 84%;

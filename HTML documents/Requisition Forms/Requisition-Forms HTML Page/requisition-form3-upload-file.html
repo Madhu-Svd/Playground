@@ -34,7 +34,7 @@
                     <p style="font-size:1.2vw; color: #000000;font-weight: bold ;letter-spacing: 1.4px;">
                         ATTACHMENTS
                     </p>
-                    <p style="color: #747474; font: size 1vw;padding-top: 5px; letter-spacing: 0.6px">
+                    <p style="color: #747474; font: size 1vw;padding-top: 6px; letter-spacing: 0.6px">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                 </div>
@@ -48,7 +48,7 @@
                                 like pdf, docx, ppt, xls etc are allowed.</span>
                         </div>
                         <div style="padding: 3%">
-                            <button type="button" style="border-radius: 4px" >BROWSE</button>
+                            <button type="button" style="border-radius: 4px">BROWSE</button>
                         </div>
                     </div>
                     <div class="right">
@@ -69,7 +69,7 @@
                             <td>abc0037429023.doc</td>
                             <td>976KB</td>
                             <th rowspan="2">
-                                <div><button type="button" onclick="init()">UPLOAD</button></div>
+                                <div><button type="button" onclick="upload()">UPLOAD</button></div>
                             </th>
                         </tr>
                         <tr class="row2">
@@ -84,9 +84,11 @@
             </div>
             <div style="min-height: 20vh"></div>
             <div class="footer">
-                <div><a href="#" style="font-size: 12px; font-weight:bold;color: #595959" onclick="savedraft()">SAVE DRAFT</a></div>
+                <div><a href="#" style="font-size: 12px; font-weight:bold;color: #595959" onclick="savedraft()">SAVE
+                        DRAFT</a></div>
                 <div class="footer-right">
-                    <div><a href="#" style="font-size: 12px; font-weight:bold;padding-right: 1%" onclick="back()">BACK</a></div>
+                    <div><a href="#" style="font-size: 12px; font-weight:bold;padding-right: 1%;color: #32BDD2"
+                            onclick="back()">BACK</a></div>
                     <div><button type="button" onclick="next()">NEXT--></button></div>
                 </div>
             </div>
@@ -97,23 +99,19 @@
 
 </body>
 <script>
-        function init(){
-           window.location="requisition-form3-dis-uploaded-files.html";
-        }
-    </script>
-     <script>
-            function back(){
-               window.location="requisition-form2-item-list.html";
-            }
-        </script>
-    <script>
-            function next(){
-               window.location="requisition-form4-invite-people.html";
-            }
-        </script>
-    <script>
-            function savedraft(){
-                window.location = "requisition-form-acknowledgement.html";
-            }
-        </script>
+    function upload() {
+        window.location = "./requisition-form3-dis-uploaded-files.html";
+    }
+</script>
+<!-- <script>
+    function back() {
+        window.location = "./requisition-form2-item-list.html";
+    }
+</script>
+<script>
+    function savedraft() {
+        window.location = "./requisition-form3-upload-file-ack.html";
+    }
+</script> -->
+
 </html>

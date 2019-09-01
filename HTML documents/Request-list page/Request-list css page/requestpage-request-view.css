@@ -44,6 +44,37 @@ body{
     width: 15px;
     height:15px;
 }
+.first-container{
+    width: 6%;
+    margin-left: 1%;
+    margin-top: 8%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.first-container .left-div-yellow{
+    width: 3px;
+    height: 4%;
+    background: #E6AF2E 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #E6AF2E;
+    transform: rotate(-180deg);
+    position: absolute;
+    left:5.3%;
+    top: 32%;
+}
+.dropdown-icons{
+    width: 30px;
+    height: 30px;
+    transform: rotate(360deg);
+    padding: 4%;
+}
+.icons{
+    width:30px;
+    height: 30px;
+    padding-top: 4%;
+}
 .main-container{
     background: #ffffff 0% 0% no-repeat padding-box;
     width: 80%;

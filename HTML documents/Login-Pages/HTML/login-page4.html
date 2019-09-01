@@ -15,7 +15,7 @@
                 <label class="forgot-password"><u><b>FORGOT PASSWORD</b></u></label><br>
                 <p style="font-size: 1.2vw;padding-top:1vw">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-                    Mauris mattis, tortor sit amet tempor vehicula.
+                    Mauris mattis,tortor sit amet tempor vehicula.
                 </p>
                 <p class="email">Email</p>
                 <input type="email" class="input-box" id="email"><br>
@@ -23,15 +23,30 @@
                 <p style="color:red;font-size: 1vw">This field is required</p><br>
                 <div class="tri">!</div>
                 <p style="color:red;font-size: 1vw">This field is not registered with us.</p><br>
-                <button type="button" class="continue-btn" onclick="continuebtn()">CONTINUE</button>
+                <button type="button" class="continue-btn" id="continue">CONTINUE</button>
             </div>
+        </div>
+    </div>
+    <div class="forgotpwd-popup">
+        <div style="min-height: 35vh"></div>
+        <div class="child-container-sub-popup">
+            <label class="forgot-password-popup"><u><b>FORGOT PASSWORD</b></u></label><br>
+            <p style="font-size: 1vw;padding-top:1vw">
+                The link has been sent to your email.<br>
+                The generated link will be active for 24 hours.
+            </p>
         </div>
     </div>
 </body>
 <script>
-    function continuebtn() {
-        window.location = "./login-page5.html";
-    }
+  
+      document.getElementById("continue").addEventListener("click",function(){
+                document.querySelector(".forgotpwd-popup").style.display="block";
+         })
+         document.querySelector(".forgotpwd-popup").addEventListener("click",function(){
+             document.querySelector(".forgotpwd-popup").style.display="none";
+         })
+   
 </script>
 
 </html>

@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #f6f8f9;
+    background-color: #32BDD2;
     font-family: Roboto;
 }
 .child-container{
@@ -22,7 +22,6 @@ body{
 } 
 fieldset{
     display: inline-block;
-    /* padding: 10vh; */
     border: none;
 }
 .login{
@@ -67,7 +66,16 @@ span{
     color: #FFFFFF;   
 }
 
-
+  @media screen and (max-width: 650px) {
+     .child-container{
+      width: 50%;
+    }
+  }
+  @media only screen and (orientation: landscape) {
+    body {
+      background-color: #f6f8f9;
+    }
+  }
 
 
 

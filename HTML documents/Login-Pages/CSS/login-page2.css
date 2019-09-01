@@ -48,18 +48,8 @@ fieldset{
     margin-top: 1vw;
     padding: 1vw;
 }
-.tri{
-    height: 0;
-    width: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-   border-bottom: 12px solid #dd0606;
-   float: left;
-   margin-top: 1vh;
-   
-}
 span{
-    font-size: 0.8vw;
+    font-size: 0.9vw;
     color: #707070;
 }
 .a-href{
