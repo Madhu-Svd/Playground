@@ -6,6 +6,7 @@ import android.support.constraint.Constraints;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         button = findViewById(R.id.button);
         forgotpwd = findViewById(R.id.textView2);
         c1=findViewById(R.id.constraintLayout2);
@@ -55,6 +57,48 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        Log.d("Activity LifeCycle","onCreate() method was called");
+    }
+    @Override
+    protected void onStart() {
+
+        super.onStart();
+        Log.d("Activity LifeCycle","onStart() method was called");
+
+    }
+    @Override
+    protected void onResume() {
+
+        super.onResume();
+        Log.d("Activity LifeCycle","onResume() method was called");
+
+    }
+    @Override
+    protected void onPause() {
+
+        super.onPause();
+        Log.d("Activity LifeCycle","onPause() method was called");
+
+    }
+    @Override
+    protected void onStop() {
+
+        super.onStop();
+        Log.d("Activity LifeCycle","onStop() method was called");
+
+    }
+    @Override
+    protected void onRestart() {
+
+        super.onRestart();
+        Log.d("Activity LifeCycle","onRestart() method was called");
+
+    }
+    @Override
+    protected void onDestroy() {
+
+        super.onDestroy();
+        Log.d("Activity LifeCycle","onDestroy() method was called");
 
     }
 

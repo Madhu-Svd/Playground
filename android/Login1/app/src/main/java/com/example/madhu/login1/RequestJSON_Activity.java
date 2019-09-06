@@ -1,5 +1,6 @@
 package com.example.madhu.login1;
 
+import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -7,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
@@ -23,20 +25,27 @@ public class RequestJSON_Activity extends AppCompatActivity {
 //    String url="https://MyCreativeWebsite.000webhostapp.com/Request-data.json";
     String url= "https://mywebsiterequest.000webhostapp.com/data.json";
     String title[],date[],status[],text;
-
+//    ProgressBar progressBar;
+//ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request_json_);
         Button dataloadbtn=(Button)findViewById(R.id.loadData);
+//        progressBar=new ProgressBar(this);
+//        progressBar.setProgress(40);
+//        progressDialog=new ProgressDialog(this);
+//        progressDialog.setMessage("loading");
          recyclerView=(RecyclerView) findViewById(R.id.recyclerView);
         dataloadbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                progressDialog.show();
                 StringRequest request=new StringRequest(url, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         responseJSONData(response);
+//                        progressDialog.dismiss();
                     }
                 }, new Response.ErrorListener() {
                     @Override

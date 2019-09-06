@@ -4,8 +4,9 @@ import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements DemoInterface {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,5 +55,10 @@ public class MainActivity extends Activity {
         super.onDestroy();
         Log.d("Activity LifeCycle","onDestroy() method was called");
 
+    }
+
+    @Override
+    public void displaymsg() {
+        Toast.makeText(getApplicationContext(),"Life Cycle of an activity",Toast.LENGTH_LONG).show();
     }
 }
