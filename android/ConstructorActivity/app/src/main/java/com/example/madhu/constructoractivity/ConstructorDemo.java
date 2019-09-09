@@ -19,13 +19,14 @@ public class ConstructorDemo extends AppCompatActivity
             System.out.println("Constructor");
             System.out.println("ConstructorDemo");
 
-//            Toast.makeText(getApplicationContext(), "constructor", Toast.LENGTH_LONG).show();
+//            Toast.makeText(applicationContext, "constructor", Toast.LENGTH_LONG).show();
 
         }
-
-        public void display(Context applicationContext) {
-            Toast.makeText(applicationContext, "this is constructor", Toast.LENGTH_LONG).show();
-        }
-
+    public void display(Context applicationContext) {
+        Toast.makeText(applicationContext, "This is Constructor Demo class", Toast.LENGTH_LONG).show();
+    }
+    public void display1(Context applicationContext) {
+        Toast.makeText(applicationContext, "Constructor msg is displayed while clicking the button", Toast.LENGTH_LONG).show();
+    }
     }
 
