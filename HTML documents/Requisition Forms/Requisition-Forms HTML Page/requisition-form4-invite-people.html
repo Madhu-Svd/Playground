@@ -34,7 +34,7 @@
                     </div>
                     <div class="main-header-right">
                         <span style="font-size: 1vw;font-weight: bold">ADD PEOPLE</span>
-                        <img src="../Requisition-Forms images/request-icons-10.png" class="add-icon" alt="button" id="addpeople"/>
+                        <img src="../Requisition-Forms images/request-icons-10.png" class="add-icon" alt="button" onclick="addpeople()" id="addpeople"/>
                     </div>
                     <div style="clear: both"></div>
                 </div>
@@ -118,6 +118,8 @@
         </div>
         <div style="clear: both"></div>
     </div>
+
+<div class="main-popup-container" id="madhu">
     <div class="mainpop">
 
         <div class="top">
@@ -131,7 +133,7 @@
         <div class="middle">
             <div class="search-box">
                 <input class="search-text" type="text" placeholder="search...">
-                <img src="../Requisition-Forms images/request-icons-03.png" class="search-icon" alt="search-image" />
+                <img src="../Requisition-Forms images/request-icons-03.png" class="search-icon" alt="search-image" id="searchpeople"  />
             </div>
 
             <div style="min-height: 15vh"></div>
@@ -251,8 +253,9 @@
         </div>
 
     </div>
+</div>
 
-
+<div class="main-popup-container1">
     <div class="mainpop-person-selected">
 
             <div class="top">
@@ -266,7 +269,7 @@
             <div class="middle">
                 <div class="search-box">
                     <input class="search-text" type="text" placeholder="search...">
-                    <img src="../Requisition-Forms images/request-icons-03.png" class="search-icon" alt="search-image" />
+                    <img src="../Requisition-Forms images/request-icons-03.png" class="search-icon" alt="search-image" id="searchpeople" />
                 </div>
     
                 <div style="min-height: 15vh"></div>
@@ -386,27 +389,132 @@
             </div>
     
         </div>
+    </div>
 
+
+    <div class="main-popup-container2">
+        <div class="main-search-result-notfound">
+
+            <div class="top">
+                <div>
+                    <p><b>Add People</b></p>
+                </div>
+                <div><img src="../Requisition-Forms images/request-icons-13.png" class="cancel-icon" alt="cancel-image" id="search_cancel">
+                </div>
+            </div>
+    
+            <div class="middle">
+                <div class="search-box">
+                    <input class="search-text" type="text" placeholder="Peter Pattigrew">
+                    <img src="../Requisition-Forms images/request-icons-03.png" class="search-icon" alt="search-image" id="search_resultfound" />
+                </div>
+    
+                <div style="min-height: 14vh"></div>
+    
+                <div class="center">
+                    <div>
+                        <img src="../Requisition-Forms images/request-icons-04.png" class="search1-icon" alt="search1-image" />
+                    </div>
+                    <div> <span>No Results Found</span></div>
+                    <div> <p>We can’t find any item matching your search</p></div>
+                </div>
+                <div style="min-height: 8vh"></div>
+            </div>
+            <div class="bottom">
+                <div style="width:10%"><a href="#">CANCEL</a></div>
+                <div style="border:1px dashed #32BDD2;width: 60%;border-radius: 20px; text-align: center"><span>You haven't selected any person</span><button type="button">DONE</button></div>
+            </div>
+    
+        </div>
+    </div>
+
+        <div class="main-popup-container3">
+        <div class="main-search-resultfound">
+
+            <div class="top">
+                <div>
+                    <p><b>Add People</b></p>
+                </div>
+                <div><img src="../Requisition-Forms images/request-icons-13.png" class="cancel-icon" alt="cancel-image">
+                </div>
+            </div>
+    
+            <div class="middle">
+                <div class="search-box">
+                    <input class="search-text" type="text" placeholder="Peter Dinklage">
+                    <img src="../Requisition-Forms images/request-icons-03.png" class="search-icon" alt="search-image" />
+                </div>
+                <div style="min-height: 10vh"></div>
+               <div class="text"> <p style="font: Regular 5px Roboto;letter-spacing: 0.5px;color: #909090">1 result found</p></div>
+    
+                <div style="min-height: 8vh"></div>
+                <div class="first-invite">
+                    <div class="first-invite1">
+                        <div class=" image">
+                            <img src="../Requisition-Forms images/profile-picture.png" class="profile-icon"
+                                alt="profile-image" />
+                        </div>
+                        <div class="name">
+                            <div>
+                                <p>Peter Dinklage</p>
+                            </div>
+                            <div>
+                                <span>Lorem ipsum doler sit amet.</span>
+                            </div>
+                        </div>
+                        <div class=" image">
+                            <img src="../Requisition-Forms images/request-icons-10.png" class="add-icon" alt="add-image" />
+                        </div>
+                    </div>
+                </div>
+                <div style="min-height: 20vh"></div>
+            </div>
+    
+            <div class="bottom">
+                <div style="width:10%"><a href="#">CANCEL</a></div>
+                <div style="border:1px dashed #32BDD2;width: 50%;border-radius: 20px; text-align: center"><span>You haven't
+                        selected any person</span><button type="button">DONE</button></div>
+            </div>
+    
+        </div>
+    </div>
 </body>
 <script>
       document.getElementById("addpeople").addEventListener("click",function(){
-                document.querySelector(".mainpop").style.display="block";
+                document.querySelector(".main-popup-container").style.display="block";
          })
-         document.querySelector(".mainpop").addEventListener("click",function(){
-             document.querySelector(".mainpop").style.display="none";
+         document.querySelector(".main-popup-container ").addEventListener("click",function(){
+             document.querySelector(".main-popup-container").style.display="none";
          })
          document.getElementById("addfirstpeople").addEventListener("click",function(){
-                document.querySelector(".mainpop-person-selected").style.display="block";
+                document.querySelector(".main-popup-container1").style.display="block";
          })
-         document.querySelector(".mainpop-person-selected").addEventListener("click",function(){
-             document.querySelector(".mainpop-person-selected").style.display="none";
+         document.querySelector(".main-popup-container1").addEventListener("click",function(){
+             document.querySelector(".main-popup-container1").style.display="none";
          })
          document.getElementById("addicon").addEventListener("click",function(){
-                document.querySelector(".mainpop").style.display="block";
+                document.querySelector(".main-popup-container").style.display="block";
          })
-         document.querySelector(".mainpop").addEventListener("click",function(){
-             document.querySelector(".mainpop").style.display="none";
+         document.querySelector(".main-popup-container").addEventListener("click",function(){
+             document.querySelector(".main-popup-container").style.display="none";
          })
+
+         document.getElementById("searchpeople").addEventListener("click",function(){
+                document.querySelector(".main-popup-container2").style.display="block";
+         })
+         document.querySelector(".main-popup-container2").addEventListener("click",function(){
+             document.querySelector(".main-popup-container2").style.display="none";
+         })
+        //  document.querySelector(".main-search-popup").addEventListener("click",function(){
+        //      document.querySelector(".mainpop").style.display="block";
+        //  })
+         document.getElementById("search_resultfound").addEventListener("click",function(){
+                document.querySelector(".main-popup-container3").style.display="block";
+         })
+         document.querySelector(".main-popup-container3").addEventListener("click",function(){
+             document.querySelector(".main-popup-container3").style.display="none";
+         })
+        //  id="search_resultfound"
     </script>
 <script>
         function savedraft(){
@@ -423,5 +531,11 @@
                window.location="requisition-form3-dis-uploaded-files.html";
             }
         </script>
+        <!-- <script>
+            function addpeople(){
+                document.location="#madhu";
+            }
+        
+        </script> -->
 
 </html>

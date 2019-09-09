@@ -23,11 +23,11 @@
                 <p style="color:red;font-size: 1vw">This field is required</p><br>
                 <div class="tri">!</div>
                 <p style="color:red;font-size: 1vw">This field is not registered with us.</p><br>
-                <button type="button" class="continue-btn" id="continue">CONTINUE</button>
+                <button type="button" class="continue-btn" onclick="mm()" >CONTINUE</button>
             </div>
         </div>
     </div>
-    <div class="forgotpwd-popup">
+    <!-- <div class="forgotpwd-popup">
         <div style="min-height: 35vh"></div>
         <div class="child-container-sub-popup">
             <label class="forgot-password-popup"><u><b>FORGOT PASSWORD</b></u></label><br>
@@ -37,8 +37,27 @@
             </p>
         </div>
     </div>
+ -->
+
+
+    <div class="main-container1" id="continue">
+        <div style="min-height: 35vh"></div>
+        <div class="child-container-sub1">
+            <label class="forgot-password"><u><b>FORGOT PASSWORD</b></u></label><br>
+            <p style="font-size: 1vw;padding-top:1vw">
+                The link has been sent to your email.<br>
+                The generated link will be active for 24 hours.
+            </p>
+        </div>
+    </div>
 </body>
 <script>
+    function mm(){
+        document.location="#continue";
+    }
+
+</script>
+<!-- <script>
   
       document.getElementById("continue").addEventListener("click",function(){
                 document.querySelector(".forgotpwd-popup").style.display="block";
@@ -47,6 +66,6 @@
              document.querySelector(".forgotpwd-popup").style.display="none";
          })
    
-</script>
+</script> -->
 
 </html>

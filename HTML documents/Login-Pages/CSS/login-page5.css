@@ -16,17 +16,19 @@ body{
     background: #FFFFFF 0% 0% no-repeat padding-box;
     padding: 4vw;
     opacity: 1;
+
 }
-.forgot-password{
+.child-container-sub .forgot-password{
     color: #595959;
     font-size: 1.2vw;
 }
-p{
+.child-container-sub p{
     color: #747474;
     font: Regular Gibson;
     letter-spacing: 0.6px;
     opacity: 1;
 }
+
 
 
 

@@ -48,6 +48,8 @@ body{
     font-size: 0.8vw;
     font-weight: bold;
     color: #FFFFFF;   
+   
+
 }
 .tri{
     height: 0;
@@ -62,7 +64,7 @@ body{
     left: 32%;
     display: none;
    }
-.child-container-sub-popup{
+/* .child-container-sub-popup{
     width: 32vw;
     height: 15vw;
     margin: auto;
@@ -80,11 +82,48 @@ p{
     font: Regular Gibson;
     letter-spacing: 0.6px;
     opacity: 1;
+} */
+
+
+
+
+
+.main-container1{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:rgba(0, 0, 0,0.7) ;
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.main-container1:target{
+    visibility:visible;
+opacity: 1;
 }
 
+.child-container-sub1{
+    width: 32vw;
+    height: 15vw;
+    margin: auto;
+    box-shadow: 0px 0px 5px #d3d3d3; 
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    padding: 4vw;
+    /* opacity: 1; */
 
-
-
+}
+.child-container-sub1 .forgot-password{
+    color: #595959;
+    font-size: 1.2vw;
+}
+.child-container-sub1 p{
+    color: #747474;
+    font: Regular Gibson;
+    letter-spacing: 0.6px;
+    /* opacity: 1; */
+}
 
 
 
