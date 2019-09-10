@@ -4,7 +4,7 @@ import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
-public class BookInfo extends AppCompatActivity {
+public class BookInfo  {
     String title,author,publisher;
     public double cost;
     public int year;
@@ -22,7 +22,7 @@ public class BookInfo extends AppCompatActivity {
       System.out.println("Book Title:" +title);
       System.out.println("Book Author:" +author);
       System.out.println("Book Publisher:" +publisher);
-      System.out.println("Book year:" +2019);
-      System.out.println("Book cost:" +400);
+      System.out.println("Book year:" +year);
+      System.out.println("Book cost:" +cost);
     }
 }
