@@ -21,12 +21,19 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class RequestPage_BurgerMenu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
          android.widget.ListPopupWindow listPopupWindow;
          ListView listView;
          Button newrequest;
+         TextView showMoreText;
+
+    ArrayList<String> title=new ArrayList<>();
+    ArrayList<String> status=new ArrayList<>();
+    ArrayList<String> dateofapproval=new ArrayList<>();
 
 
     @Override
@@ -34,19 +41,34 @@ public class RequestPage_BurgerMenu extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request_page__burger_menu);
         newrequest=findViewById(R.id.button3);
+        showMoreText=findViewById(R.id.showMore);
         ImageView filter_image =(ImageView) findViewById(R.id.filter_icon);
         ImageView bell_image=(ImageView) findViewById(R.id.imageView7);
         listPopupWindow=new android.widget.ListPopupWindow(getApplicationContext());
         final TextView listpopup=(TextView)findViewById(R.id.popupmenu);
         listView=findViewById(R.id.requestList);
-//        String[] items_list={"CLEAR","APPROVED","AWATING","DRAFT","REJECTED"};
-
+//      String[] items_list={"CLEAR","APPROVED","AWATING","DRAFT","REJECTED"};
         String[] items={"CLEAR","APPROVED","AWATING","DRAFT","REJECTED"};
-        String items_title[]={"PUR - 2019 - 056","PUR - 2019 - 056","PUR - 2019 - 056","PUR - 2019 - 056"};
-        String items_date[]={"06 Jul 2019","06 Jul 2019","06 Jul 2019","06 Jul 2019"};
-        String items_status[]={"APPROVED","APPROVED","APPROVED","APPROVED"};
-//        String statusColors
-        ListAdapter adapter=new MyListAdapter(getApplicationContext(),items_title,items_date,items_status);
+
+        title.add("PUR-2019-056");
+        title.add("PUR-2019-057");
+        title.add("PUR-2019-058");
+        title.add("PUR-2019-059");
+
+        status.add("APPROVED");
+        status.add("REJECTED");
+        status.add("DRAFT");
+        status.add("CANCEL");
+
+        dateofapproval.add("21-05-2019");
+        dateofapproval.add("22-05-2019");
+        dateofapproval.add("23-05-2019");
+        dateofapproval.add("24-05-2019");
+//        String items_title[]={"PUR - 2019 - 056","PUR - 2019 - 056","PUR - 2019 - 056","PUR - 2019 - 056"};
+//        String items_date[]={"06 Jul 2019","06 Jul 2019","06 Jul 2019","06 Jul 2019"};
+//        String items_status[]={"APPROVED","APPROVED","APPROVED","APPROVED"};
+
+        ListAdapter adapter=new MyListAdapter(getApplicationContext(),title,status,dateofapproval);
         listView.setAdapter(adapter);
 
 //        ListAdapter adapter=new ArrayAdapter<>(getApplicationContext(),R.layout.list_popup_menu,items_list);
@@ -62,6 +84,13 @@ public class RequestPage_BurgerMenu extends AppCompatActivity
             }
         });
         newrequest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),RequisitionForm.class);
+                startActivity(intent);
+            }
+        });
+        showMoreText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getApplicationContext(),RecyclerViewActivity.class);
