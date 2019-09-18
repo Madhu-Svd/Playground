@@ -21,6 +21,9 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.madhu.login1.global.RequestStatus;
+import com.example.madhu.login1.model.Request_Model;
+
 import java.util.ArrayList;
 
 public class RequestPage_BurgerMenu extends AppCompatActivity
@@ -31,44 +34,51 @@ public class RequestPage_BurgerMenu extends AppCompatActivity
          Button newrequest;
          TextView showMoreText;
 
-    ArrayList<String> title=new ArrayList<>();
-    ArrayList<String> status=new ArrayList<>();
-    ArrayList<String> dateofapproval=new ArrayList<>();
+//    ArrayList<String> title=new ArrayList<>();
+//    ArrayList<String> status=new ArrayList<>();
+//    ArrayList<String> dateofapproval=new ArrayList<>();
+    ArrayList<Request_Model> request_list=new ArrayList<>();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request_page__burger_menu);
-        newrequest=findViewById(R.id.button3);
+        newrequest=findViewById(R.id.newRequestBtn);
         showMoreText=findViewById(R.id.showMore);
         ImageView filter_image =(ImageView) findViewById(R.id.filter_icon);
-        ImageView bell_image=(ImageView) findViewById(R.id.imageView7);
+        ImageView bell_image=(ImageView) findViewById(R.id.bellicon);
         listPopupWindow=new android.widget.ListPopupWindow(getApplicationContext());
         final TextView listpopup=(TextView)findViewById(R.id.popupmenu);
         listView=findViewById(R.id.requestList);
 //      String[] items_list={"CLEAR","APPROVED","AWATING","DRAFT","REJECTED"};
         String[] items={"CLEAR","APPROVED","AWATING","DRAFT","REJECTED"};
 
-        title.add("PUR-2019-056");
-        title.add("PUR-2019-057");
-        title.add("PUR-2019-058");
-        title.add("PUR-2019-059");
+        Request_Model request_model=new Request_Model();
+        request_model.setRequestNumber("PUR-2019-056");
+        request_model.setRequestStatus(RequestStatus.AWAITING_APPROVAL);
+        request_model.setRequestDate("21-05-2019");
+        request_list.add(request_model);
 
-        status.add("APPROVED");
-        status.add("REJECTED");
-        status.add("DRAFT");
-        status.add("CANCEL");
+        request_model=new Request_Model();
+        request_model.setRequestNumber("PUR-2019-057");
+        request_model.setRequestStatus(RequestStatus.APPROVED);
+        request_model.setRequestDate("21-05-2019");
+        request_list.add(request_model);
 
-        dateofapproval.add("21-05-2019");
-        dateofapproval.add("22-05-2019");
-        dateofapproval.add("23-05-2019");
-        dateofapproval.add("24-05-2019");
-//        String items_title[]={"PUR - 2019 - 056","PUR - 2019 - 056","PUR - 2019 - 056","PUR - 2019 - 056"};
-//        String items_date[]={"06 Jul 2019","06 Jul 2019","06 Jul 2019","06 Jul 2019"};
-//        String items_status[]={"APPROVED","APPROVED","APPROVED","APPROVED"};
+        request_model=new Request_Model();
+        request_model.setRequestNumber("PUR-2019-058");
+        request_model.setRequestStatus(RequestStatus.REJECTED);
+        request_model.setRequestDate("21-05-2019");
+        request_list.add(request_model);
 
-        ListAdapter adapter=new MyListAdapter(getApplicationContext(),title,status,dateofapproval);
+        request_model=new Request_Model();
+        request_model.setRequestNumber("PUR-2019-059");
+        request_model.setRequestStatus(RequestStatus.DRAFT);
+        request_model.setRequestDate("21-05-2019");
+        request_list.add(request_model);
+
+        ListAdapter adapter=new MyListAdapter(getApplicationContext(),request_list);
         listView.setAdapter(adapter);
 
 //        ListAdapter adapter=new ArrayAdapter<>(getApplicationContext(),R.layout.list_popup_menu,items_list);

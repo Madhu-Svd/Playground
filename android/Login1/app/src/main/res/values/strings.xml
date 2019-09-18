@@ -10,5 +10,6 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_requisition_form">RequisitionForm</string>
+    <string name="title_activity_requisition_form__items__list">RequisitionForm_Items_List</string>
 
 </resources>

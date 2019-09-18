@@ -8,26 +8,21 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.madhu.login1.global.RequestStatus;
+import com.example.madhu.login1.model.Request_Model;
+
 import java.util.ArrayList;
 
 class MyListAdapter extends BaseAdapter   {
-    ArrayList<String> title_text;
-    ArrayList<String> status_text;
-    ArrayList<String> approvaldate;
-//    array declaration
-//    String items_title[]={};
-//    String items_date[]={};
-//    String items_staus[]={};
+    ArrayList<Request_Model> request;
     private Context context;
-    public MyListAdapter(Context context, ArrayList<String> title, ArrayList<String> dateofapproval, ArrayList<String> status) {
+    public MyListAdapter(Context context, ArrayList<Request_Model> request) {
         this.context=context;
-        this.title_text=title;
-        this.status_text=status;
-        this.approvaldate=dateofapproval;
+        this.request=request;
     }
     @Override
     public int getCount() {
-        return title_text.size();
+        return request.size();
     }
 
     @Override
@@ -44,16 +39,18 @@ class MyListAdapter extends BaseAdapter   {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View view=LayoutInflater.from(context).inflate(R.layout.itemlist,parent,false);
-        TextView title,dateapproval,status;
+        TextView request_No,dateapproval,status;
         ImageView imageView;
-        title=view.findViewById(R.id.it_title);
+        request_No=view.findViewById(R.id.it_No);
         dateapproval=view.findViewById(R.id.it_date);
         status=view.findViewById(R.id.it_status);
-        imageView=view.findViewById(R.id.imageView7);
+        imageView=view.findViewById(R.id.bellicon);
 
-        title.setText( title_text.get(position));
-        status.setText(status_text.get(position));
-        dateapproval.setText(approvaldate.get(position));
+        Request_Model request_model=this.request.get(position);
+
+        request_No.setText(String.valueOf(request_model.getRequestNumber()));
+        status.setText(String.valueOf(request_model.getRequestStatus()));
+        dateapproval.setText(String.valueOf(request_model.getRequestDate()));
         imageView.setImageResource(R.drawable.bell_icon);
         return view;
 //        using array

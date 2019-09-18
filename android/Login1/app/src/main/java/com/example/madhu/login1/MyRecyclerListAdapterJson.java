@@ -55,21 +55,21 @@ class MyRecyclerListAdapterJson extends RecyclerView.Adapter<MyRecyclerListAdapt
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView items_title,items_date,items_status;
+        TextView items_No,items_date,items_status;
         ImageView imageView;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            items_title=itemView.findViewById(R.id.it_title);
+            items_No=itemView.findViewById(R.id.it_No);
             items_date=itemView.findViewById(R.id.it_date);
             items_status=itemView.findViewById(R.id.it_status);
-            imageView=itemView.findViewById(R.id.imageView7);
+            imageView=itemView.findViewById(R.id.bellicon);
 
         }
 
         public void setData(JSONObject object) {
             try {
-                items_title.setText(object.getString("title"));
+                items_No.setText(object.getString("title`"));
                 items_date.setText(object.getString("date"));
                 items_status.setText(object.getString("status"));
                 imageView.setImageResource(R.drawable.bell_icon);

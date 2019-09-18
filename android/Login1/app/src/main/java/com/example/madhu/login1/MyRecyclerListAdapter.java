@@ -10,13 +10,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 class MyRecyclerListAdapter extends RecyclerView.Adapter {
-    String items_title[]={};
+    String items_No[]={};
     String items_date[]={};
     String items_staus[]={};
     private Context context;
     public MyRecyclerListAdapter(Context context, String[] title, String[] date, String[] status) {
         this.context=context;
-        this.items_title=title;
+        this.items_No=title;
         this.items_date=date;
         this.items_staus=status;
     }
@@ -32,12 +32,12 @@ class MyRecyclerListAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int position) {
     MyRecyclerListAdapter.MyViewHolder myViewHolder=(MyRecyclerListAdapter.MyViewHolder)viewHolder;
-    myViewHolder.setdata(String.valueOf(items_title[position]),String.valueOf(items_date[position]),String.valueOf(items_staus[position]));
+    myViewHolder.setdata(String.valueOf(items_No[position]),String.valueOf(items_date[position]),String.valueOf(items_staus[position]));
     }
 
     @Override
     public int getItemCount() {
-        return items_title.length;
+        return items_No.length;
     }
     public class MyViewHolder extends RecyclerView.ViewHolder{
         public TextView title,date,status;
@@ -45,10 +45,10 @@ class MyRecyclerListAdapter extends RecyclerView.Adapter {
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            title=itemView.findViewById(R.id.it_title);
+            title=itemView.findViewById(R.id.it_No);
             date=itemView.findViewById(R.id.it_date);
             status=itemView.findViewById(R.id.it_status);
-            imageView=itemView.findViewById(R.id.imageView7);
+            imageView=itemView.findViewById(R.id.bellicon);
 
         }
         public void setdata(String items_title,String items_date,String items_staus){

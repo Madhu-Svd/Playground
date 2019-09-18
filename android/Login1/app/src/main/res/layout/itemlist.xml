@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/it_title"
+        android:id="@+id/it_No"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -35,7 +35,7 @@
         android:textSize="10dp"
         app:fontFamily="sans-serif"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/it_title" />
+        app:layout_constraintTop_toBottomOf="@+id/it_No" />
 
     <TextView
         android:id="@+id/it_date"
@@ -86,7 +86,7 @@
         app:layout_constraintVertical_bias="0.166" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/bellicon"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="53dp"
