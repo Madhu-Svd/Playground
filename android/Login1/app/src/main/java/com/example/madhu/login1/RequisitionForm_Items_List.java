@@ -1,5 +1,6 @@
 package com.example.madhu.login1;
 
+
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,14 +13,31 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class RequisitionForm_Items_List extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+        TextView RQ_No,RQ_Date,RQ_Status;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_requisition_form__items__list);
+
+        RQ_No=findViewById(R.id.Requestnumber);
+        RQ_Date=findViewById(R.id.RequestDate);
+        RQ_Status=findViewById(R.id.RequestStatus);
+
+        Bundle requestBundle = getIntent().getBundleExtra("request_model");
+
+        String Requestnumber = requestBundle.getString("RequestNumber");
+        RQ_No.setText(Requestnumber);
+        String RequestDate = requestBundle.getString("RequestDate");
+        RQ_Date.setText(RequestDate);
+        String RequestStatus = requestBundle.getString("requestStatus");
+        RQ_Status.setText(RequestStatus);
+
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

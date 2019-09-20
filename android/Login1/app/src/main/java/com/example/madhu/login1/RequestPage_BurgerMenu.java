@@ -14,12 +14,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.madhu.login1.global.RequestStatus;
 import com.example.madhu.login1.model.Request_Model;
@@ -34,11 +36,11 @@ public class RequestPage_BurgerMenu extends AppCompatActivity
          Button newrequest;
          TextView showMoreText;
 
-//    ArrayList<String> title=new ArrayList<>();
-//    ArrayList<String> status=new ArrayList<>();
-//    ArrayList<String> dateofapproval=new ArrayList<>();
-    ArrayList<Request_Model> request_list=new ArrayList<>();
+    public static final String KEY_REQUESTNUMBER="RequestNumber";
+    public static final String KEY_REQUESTSTATUS="requestStatus";
+    public static final String KEY_REQUESTDATE = "RequestDate";
 
+    ArrayList<Request_Model> request_list=new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,7 @@ public class RequestPage_BurgerMenu extends AppCompatActivity
         listPopupWindow=new android.widget.ListPopupWindow(getApplicationContext());
         final TextView listpopup=(TextView)findViewById(R.id.popupmenu);
         listView=findViewById(R.id.requestList);
+
 //      String[] items_list={"CLEAR","APPROVED","AWATING","DRAFT","REJECTED"};
         String[] items={"CLEAR","APPROVED","AWATING","DRAFT","REJECTED"};
 
@@ -100,6 +103,8 @@ public class RequestPage_BurgerMenu extends AppCompatActivity
                 startActivity(intent);
             }
         });
+
+
         showMoreText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,6 +112,25 @@ public class RequestPage_BurgerMenu extends AppCompatActivity
                 startActivity(intent);
             }
         });
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        @Override
+         public void onItemClick(AdapterView<?> adapter, View view, int position, long arg) {
+
+            Request_Model request_model=request_list.get(position);
+            Intent intent = new Intent(getApplicationContext(), RequisitionForm_Items_List.class);
+
+            Bundle requestDataBundle=new Bundle();
+            requestDataBundle.putString(KEY_REQUESTNUMBER,request_model.getRequestNumber());
+            requestDataBundle.putString(KEY_REQUESTDATE,request_model.getRequestDate());
+            requestDataBundle.putString(KEY_REQUESTSTATUS,request_model.getRequestStatus().toString());
+            intent.putExtra("request_model",requestDataBundle);
+            startActivity(intent);
+         }
+        });
+
+
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
