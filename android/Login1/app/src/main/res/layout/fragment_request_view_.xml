@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RequestView_Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/MainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/AllImgesLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:id="@+id/homeIcon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/home_icon"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/messageIcon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/message_icon"
+                        app:layout_constraintStart_toEndOf="@+id/homeIcon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/boxIcon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/box_icon"
+                        app:layout_constraintStart_toEndOf="@+id/messageIcon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/editIcon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/edit_icon"
+                        app:layout_constraintStart_toEndOf="@+id/boxIcon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/arrowIcon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/arrow_icon"
+                        app:layout_constraintStart_toEndOf="@+id/editIcon"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/RequestViewHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:padding="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/AllImgesLayout">
+
+                    <TextView
+                        android:id="@+id/RequestViewTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="REQUEST VIEW"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/RequestViewTitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Lorem ipsum dolor sit amet,consectetur adipscing elit.Mauris mattis,tortor sit amet tempor vehicula."
+                        android:textColor="#FFFFFF"
+                        android:textSize="10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/RequestViewTitle" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/RequestDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:padding="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/RequestViewHeader">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/REQUEST"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="REQUEST#" />
+
+                            <TextView
+                                android:id="@+id/RequestNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="PUR-2019-056"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/SUBMITTED"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="SUBMITTED" />
+
+                            <TextView
+                                android:id="@+id/SubmittedOn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="06,July 2019"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/STATUS"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="STATUS" />
+
+                            <TextView
+                                android:id="@+id/RequestStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="AWAITING APPROVAL"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/NoteLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="139dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    app:layout_constraintStart_toEndOf="@+id/AttachmentsLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/RequestDetails">
+
+                    <TextView
+                        android:id="@+id/NoteTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="NOTE"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/NoteText"
+                        android:layout_width="292dp"
+                        android:layout_height="56dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="18dp"
+                        android:text="BAJAHJDNMSNMVBJGCDHNCBCNHZXJKCHMNCNHJDKCHSDJNCMSDNMDSJFSHJKFHSMCN SDCSDJHJSHFFMDSNFMDHJVHJDSVNSM VSBVNSVSNMVSM,NVSBS"
+                        android:textSize="10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/NoteTitle" />
+
+                    <TextView
+                        android:id="@+id/RequestType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="REQUEST TYPE   -  SELF"
+                        android:textSize="10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/NoteText" />
+                </android.support.constraint.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/ItemsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="8dp"
+                    android:text="ITEMS"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/NoteLayout" />
+
+                <ListView
+                    android:id="@+id/ListViewFragment"
+                    android:layout_width="501dp"
+                    android:layout_height="88dp"
+                    android:layout_marginTop="192dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ItemsTitle" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/AttachmentsLayout"
+                    android:layout_width="369dp"
+                    android:layout_height="138dp"
+                    tools:layout_editor_absoluteX="124dp"
+                    tools:layout_editor_absoluteY="226dp">
+
+                    <TextView
+                        android:id="@+id/AttachmentTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:text="ATTACHMENTS"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="-22dp" />
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/requistion_title_border"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
+
+                        <TextView
+                            android:id="@+id/AttachmentDoc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="4dp"
+                            android:text="abc003745gb9023.doc"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/KB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginRight="20dp"
+                            android:text="988KB"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/AttachmentText"
+                            android:layout_width="275dp"
+                            android:layout_height="33dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/requistion_title_border"
+                            android:padding="2dp"
+                            android:text="Lorem ipsum dolor sit amet,consectetur..."
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/AttachmentDoc" />
+                    </android.support.constraint.ConstraintLayout>
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/constraintLayout5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/requistion_title_border"
+                        app:layout_constraintTop_toBottomOf="@+id/AttachmentTitle"
+                        tools:layout_editor_absoluteX="280dp">
+
+                        <TextView
+                            android:id="@+id/AttachmentDoc2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="4dp"
+                            android:text="abc0037429023.doc"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/KB2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginRight="20dp"
+                            android:text="976KB"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/AttachmentText2"
+                            android:layout_width="275dp"
+                            android:layout_height="19dp"
+                            android:background="@drawable/requistion_title_border"
+                            android:padding="2dp"
+                            android:text="Lorem ipsum dolor sit amet,consectetur..."
+                            tools:layout_editor_absoluteY="31dp" />
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/InveetsLayout"
+                    android:layout_width="393dp"
+                    android:layout_height="849dp"
+                    android:layout_marginStart="236dp"
+                    android:layout_marginLeft="236dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/AttachmentsLayout">
+
+                    <TextView
+                        android:id="@+id/InveetsTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="7dp"
+                        android:text="INVEETS"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="87dp"
+                        android:layout_marginTop="121dp"
+                        android:background="@drawable/requistion_title_border"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
+
+                        <TextView
+                            android:id="@+id/InveetsName1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="4dp"
+                            android:text="abc003745gb9023.doc"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/InveetsText1"
+                            android:layout_width="275dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="8dp"
+                            android:padding="2dp"
+                            android:text="Lorem ipsum dolor sit amet,consectetur..."
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/InveetsName1" />
+                    </android.support.constraint.ConstraintLayout>
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/constraintLayout5"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/requistion_title_border"
+                        tools:layout_editor_absoluteY="23dp">
+
+                        <TextView
+                            android:id="@+id/InveetsName2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="60dp"
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginTop="16dp"
+                            android:text="abc0037429023.doc"
+                            app:layout_constraintStart_toEndOf="@+id/imageView15"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/InveetsText2"
+                            android:layout_width="279dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="11dp"
+                            android:padding="2dp"
+                            android:text="Lorem ipsum dolor sit amet,consectetur..."
+                            app:layout_constraintStart_toEndOf="@+id/imageView15"
+                            app:layout_constraintTop_toBottomOf="@+id/InveetsName2" />
+
+                        <ImageView
+                            android:id="@+id/imageView15"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+
+                            android:layout_marginStart="27dp"
+                            android:layout_marginLeft="27dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/constraintLayout5"
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="41dp"
+                        android:layout_marginLeft="41dp"
+                        android:layout_marginTop="201dp"
+                        android:background="@drawable/requistion_title_border"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
+
+                        <TextView
+                            android:id="@+id/InveetsName3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="abc0037429023.doc"
+                            tools:layout_editor_absoluteX="129dp"
+                            tools:layout_editor_absoluteY="0dp" />
+
+                        <TextView
+                            android:id="@+id/InveetsText3"
+                            android:layout_width="275dp"
+                            android:layout_height="29dp"
+                            android:padding="2dp"
+                            android:text="Lorem ipsum dolor sit amet,consectetur..."
+                            tools:layout_editor_absoluteX="101dp"
+                            tools:layout_editor_absoluteY="0dp" />
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/ApprovalLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:layout_editor_absoluteX="24dp"
+                    tools:layout_editor_absoluteY="1004dp">
+
+                    <TextView
+                        android:id="@+id/ApprovalTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="APPROVAL(S)"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        tools:layout_editor_absoluteX="24dp"
+                        tools:layout_editor_absoluteY="7dp" />
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/requistion_title_border"
+                        tools:layout_editor_absoluteX="24dp"
+                        tools:layout_editor_absoluteY="111dp">
+
+                        <TextView
+                            android:id="@+id/ApprovalName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="abc003745gb9023.doc"
+                            tools:layout_editor_absoluteX="16dp"
+                            tools:layout_editor_absoluteY="4dp" />
+
+                        <TextView
+                            android:id="@+id/ApprovalText"
+                            android:layout_width="275dp"
+                            android:layout_height="33dp"
+                            android:background="@drawable/requistion_title_border"
+                            android:padding="2dp"
+                            android:text="Lorem ipsum dolor sit amet,consectetur..."
+                            tools:layout_editor_absoluteY="31dp" />
+                    </android.support.constraint.ConstraintLayout>
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/constraintLayout6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/requistion_title_border"
+                        tools:layout_editor_absoluteX="24dp"
+                        tools:layout_editor_absoluteY="39dp">
+
+                        <TextView
+                            android:id="@+id/ApprovalName2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="abc0037429023.doc"
+                            tools:layout_editor_absoluteX="16dp"
+                            tools:layout_editor_absoluteY="4dp" />
+
+                        <TextView
+                            android:id="@+id/ApprovalText2"
+                            android:layout_width="275dp"
+                            android:layout_height="33dp"
+                            android:background="@drawable/requistion_title_border"
+                            android:padding="2dp"
+                            android:text="Lorem ipsum dolor sit amet,consectetur..."
+                            tools:layout_editor_absoluteY="31dp" />
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

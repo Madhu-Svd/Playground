@@ -10,32 +10,32 @@
     tools:showIn="@layout/app_bar_request_page__burger_menu">
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout5"
+        android:id="@+id/RequestPage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/requestitems_border"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout6"
+        app:layout_constraintBottom_toTopOf="@+id/filterLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <android.support.constraint.Guideline
-            android:id="@+id/guideline7"
+            android:id="@+id/guidelineHorizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.5" />
 
         <android.support.constraint.Guideline
-            android:id="@+id/guideline8"
+            android:id="@+id/guidelineVertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.5" />
 
         <TextView
-            android:id="@+id/textView14"
+            android:id="@+id/myRequests"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -83,7 +83,7 @@
             app:layout_constraintTop_toBottomOf="@+id/newRequestBtn">
 
             <EditText
-                android:id="@+id/editText5"
+                android:id="@+id/SearchEditText"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_marginStart="25dp"
@@ -105,14 +105,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                app:layout_constraintStart_toEndOf="@+id/editText5"
+                app:layout_constraintStart_toEndOf="@+id/SearchEditText"
                 app:layout_constraintTop_toTopOf="parent" />
         </android.support.constraint.ConstraintLayout>
 
     </android.support.constraint.ConstraintLayout>
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout6"
+        android:id="@+id/filterLayout"
         android:layout_width="match_parent"
         android:layout_height="97dp"
         android:background="@drawable/requestitems_border"
@@ -120,7 +120,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
+        app:layout_constraintTop_toBottomOf="@+id/RequestPage">
 
         <ImageView
             android:id="@+id/filter_icon"
@@ -170,7 +170,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
+        app:layout_constraintTop_toBottomOf="@+id/filterLayout" />
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout7"

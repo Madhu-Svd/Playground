@@ -2,8 +2,6 @@ package com.example.madhu.login1;
 
 import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
-import android.support.constraint.Constraints;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,7 +13,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     Button button;
     ConstraintLayout c1,c2;
-    TextView forgotpwd;
+    TextView forgotpwd,login;
     EditText email,password;
 
 
@@ -25,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         button = findViewById(R.id.button);
+        login=findViewById(R.id.textView);
         forgotpwd = findViewById(R.id.textView2);
         c1=findViewById(R.id.constraintLayout2);
         c2= findViewById(R.id.constraintLayout3);
@@ -52,6 +51,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getApplicationContext(),ForgotPassword1.class);
+                startActivity(intent);
+            }
+        });
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),RequestPageActivity.class);
                 startActivity(intent);
             }
         });
