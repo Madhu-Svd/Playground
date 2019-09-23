@@ -13,13 +13,17 @@ import android.widget.TextView;
 
 
 public class RequestPage_Fragment extends Fragment {
-    android.widget.ListPopupWindow listPopupWindow;
+  private View rootView;
+  private TextView textView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_request_page_, container, false);
+       rootView= inflater.inflate(R.layout.fragment_request_page_, container, false);
+
+        textView=rootView.findViewById(R.id.MyRequest);
+        return rootView;
 
 
 
