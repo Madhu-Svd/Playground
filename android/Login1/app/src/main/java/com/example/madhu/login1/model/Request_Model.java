@@ -9,6 +9,11 @@ public class Request_Model implements Serializable {
     String RequestNumber;
     RequestStatus requestStatus;
     String RequestDate;
+    String ItemsDescription;
+    String ItemsNumber;
+    String ItemsDate;
+    String ItemsCost;
+
 
 
     public String getRequestNumber() {
@@ -33,5 +38,37 @@ public class Request_Model implements Serializable {
 
     public void setRequestDate(String requestDate) {
         RequestDate = requestDate;
+    }
+
+    public String getItemsDescription() {
+        return ItemsDescription;
+    }
+
+    public void setItemsDescription(String itemsDescription) {
+        ItemsDescription = itemsDescription;
+    }
+
+    public String getItemsNumber() {
+        return ItemsNumber;
+    }
+
+    public void setItemsNumber(String itemsNumber) {
+        ItemsNumber = itemsNumber;
+    }
+
+    public String getItemsDate() {
+        return ItemsDate;
+    }
+
+    public void setItemsDate(String itemsDate) {
+        ItemsDate = itemsDate;
+    }
+
+    public String getItemsCost() {
+        return ItemsCost;
+    }
+
+    public void setItemsCost(String itemsCost) {
+        ItemsCost = itemsCost;
     }
 }

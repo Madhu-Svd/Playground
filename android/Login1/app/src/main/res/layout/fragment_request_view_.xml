@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RequestView_Fragment"
-    android:background="#cec6c6">
+    android:background="#ffffff">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -13,13 +13,14 @@
     <ScrollView
         android:id="@+id/ScrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,7 +30,8 @@
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/MainLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:paddingBottom="30dp">
 
 
                 <android.support.constraint.ConstraintLayout
@@ -280,14 +282,17 @@
                 <ListView
                     android:id="@+id/ListViewFragment"
                     android:layout_width="match_parent"
-                    android:layout_height="69dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/ItemsTitle" />
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/AttachmentsLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="195dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:paddingBottom="10dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/ListViewFragment">
 
@@ -297,6 +302,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
                         android:text="ATTACHMENTS"
                         android:textColor="#000000"
                         android:textSize="12dp"
@@ -311,7 +317,7 @@
                         android:layout_marginStart="44dp"
                         android:layout_marginLeft="44dp"
                         android:layout_marginTop="23dp"
-                        android:background="@drawable/requistion_title_border"
+                        android:background="@drawable/requsetview_fragment_border"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/AttachmentTitle">
 
@@ -321,7 +327,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:layout_marginLeft="16dp"
-                            android:layout_marginTop="4dp"
+                            android:layout_marginTop="8dp"
                             android:text="abc0037429023.doc"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -330,7 +336,7 @@
                             android:id="@+id/KB"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
+                            android:layout_marginTop="8dp"
                             android:layout_marginEnd="20dp"
                             android:layout_marginRight="20dp"
                             android:text="976KB"
@@ -341,9 +347,10 @@
                             android:id="@+id/AttachmentText"
                             android:layout_width="275dp"
                             android:layout_height="33dp"
-                            android:layout_marginTop="4dp"
-                            android:background="@drawable/requistion_title_border"
-                            android:padding="2dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/requsetview_fragment_border"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="4dp"
                             android:text="Lorem ipsum dolor sit amet,consectetur..."
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/AttachmentDoc" />
@@ -356,7 +363,7 @@
                         android:layout_marginStart="44dp"
                         android:layout_marginLeft="44dp"
                         android:layout_marginTop="18dp"
-                        android:background="@drawable/requistion_title_border"
+                        android:background="@drawable/requsetview_fragment_border"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/constraintLayout9">
 
@@ -366,7 +373,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:layout_marginLeft="16dp"
-                            android:layout_marginTop="4dp"
+                            android:layout_marginTop="8dp"
                             android:text="abc003745gb9023.doc"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -375,7 +382,7 @@
                             android:id="@+id/KB2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
+                            android:layout_marginTop="8dp"
                             android:layout_marginEnd="20dp"
                             android:layout_marginRight="20dp"
                             android:text="988KB"
@@ -385,10 +392,11 @@
                         <TextView
                             android:id="@+id/AttachmentText2"
                             android:layout_width="275dp"
-                            android:layout_height="21dp"
-                            android:layout_marginTop="8dp"
-                            android:background="@drawable/requistion_title_border"
-                            android:padding="2dp"
+                            android:layout_height="33dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/requsetview_fragment_border"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="4dp"
                             android:text="Lorem ipsum dolor sit amet,consectetur..."
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/AttachmentDoc2" />
@@ -400,6 +408,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:paddingBottom="10dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/AttachmentsLayout">
 
@@ -409,7 +418,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginLeft="16dp"
-                        android:layout_marginTop="4dp"
+                        android:layout_marginTop="16dp"
                         android:text="INVITEES"
                         android:textColor="#000000"
                         android:textSize="12dp"
@@ -424,8 +433,9 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="18dp"
-                        android:background="@drawable/requistion_title_border"
-                        android:padding="8dp"
+                        android:background="@drawable/requsetview_fragment_border"
+                        android:paddingRight="80dp"
+                        android:paddingBottom="10dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/InveetsTitle">
 
@@ -433,8 +443,8 @@
                             android:id="@+id/InveetsName1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginLeft="8dp"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginLeft="18dp"
                             android:layout_marginTop="14dp"
                             android:text="Luky Ray"
                             android:textSize="12dp"
@@ -445,8 +455,8 @@
                             android:id="@+id/InveetsText1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginLeft="8dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
                             android:layout_marginTop="4dp"
                             android:padding="2dp"
                             android:text="Lorem ipsum dolor sit amet."
@@ -473,8 +483,9 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="25dp"
-                        android:background="@drawable/requistion_title_border"
-                        android:padding="8dp"
+                        android:background="@drawable/requsetview_fragment_border"
+                        android:paddingRight="80dp"
+                        android:paddingBottom="10dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
 
@@ -482,8 +493,8 @@
                             android:id="@+id/InveetsName2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginLeft="8dp"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginLeft="18dp"
                             android:layout_marginTop="14dp"
                             android:text="Daisy Lake"
                             android:textSize="12dp"
@@ -494,8 +505,8 @@
                             android:id="@+id/InveetsText2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginLeft="8dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
                             android:layout_marginTop="4dp"
                             android:padding="2dp"
                             android:text="Lorem ipsum dolor sit amet."
@@ -523,9 +534,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginTop="23dp"
-                        android:background="@drawable/requistion_title_border"
-                        android:padding="8dp"
+                        android:layout_marginTop="24dp"
+                        android:background="@drawable/requsetview_fragment_border"
+                        android:paddingRight="80dp"
+                        android:paddingBottom="10dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/constraintLayout7">
 
@@ -533,8 +545,8 @@
                             android:id="@+id/InveetsName3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginLeft="8dp"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginLeft="18dp"
                             android:layout_marginTop="14dp"
                             android:text="Mark Smith"
                             android:textSize="12dp"
@@ -545,8 +557,8 @@
                             android:id="@+id/InveetsText3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginLeft="8dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
                             android:layout_marginTop="4dp"
                             android:padding="2dp"
                             android:text="Lorem ipsum dolor sit amet."
@@ -560,7 +572,7 @@
                             android:layout_height="40dp"
                             android:layout_marginStart="16dp"
                             android:layout_marginLeft="16dp"
-                            android:layout_marginTop="14dp"
+                            android:layout_marginTop="12dp"
                             android:src="@drawable/profile_icon"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -572,6 +584,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
+                    android:paddingBottom="10dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/InveetsLayout">
 
@@ -581,7 +594,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginLeft="16dp"
-                        android:layout_marginTop="7dp"
+                        android:layout_marginTop="16dp"
                         android:text="APPROVAL(S)"
                         android:textColor="#000000"
                         android:textSize="12dp"
@@ -596,8 +609,9 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="18dp"
-                        android:background="@drawable/requistion_title_border"
-                        android:padding="8dp"
+                        android:background="@drawable/requsetview_fragment_border"
+                        android:paddingRight="80dp"
+                        android:paddingBottom="10dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/ApprovalTitle">
 
@@ -605,10 +619,10 @@
                             android:id="@+id/ApprovalName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginLeft="8dp"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginLeft="18dp"
                             android:layout_marginTop="16dp"
-                            android:text="Jogn Campbell"
+                            android:text="John Campbell"
                             android:textSize="12dp"
                             app:layout_constraintStart_toEndOf="@+id/ApprovalprofileI"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -617,8 +631,8 @@
                             android:id="@+id/ApprovalText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginLeft="8dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
                             android:layout_marginTop="4dp"
                             android:padding="2dp"
                             android:text="Lorem ipsum dolor sit amet."
@@ -633,8 +647,8 @@
                             android:layout_marginStart="16dp"
                             android:layout_marginLeft="16dp"
                             android:layout_marginTop="12dp"
-                            android:src="@drawable/profile_icon"
 
+                            android:src="@drawable/profile_icon"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
                     </android.support.constraint.ConstraintLayout>
@@ -647,8 +661,9 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="16dp"
-                        android:background="@drawable/requistion_title_border"
-                        android:padding="8dp"
+                        android:background="@drawable/requsetview_fragment_border"
+                        android:paddingRight="80dp"
+                        android:paddingBottom="10dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/ApprovalsubLayout">
 
@@ -656,8 +671,8 @@
                             android:id="@+id/ApprovalName2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginLeft="8dp"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginLeft="18dp"
                             android:layout_marginTop="16dp"
                             android:text="Kate Gill"
                             android:textSize="12dp"
@@ -668,8 +683,8 @@
                             android:id="@+id/ApprovalText2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginLeft="4dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
                             android:layout_marginTop="4dp"
                             android:padding="2dp"
                             android:text="Lorem ipsum dolor sit amet."

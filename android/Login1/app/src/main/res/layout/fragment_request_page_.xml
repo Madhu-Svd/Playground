@@ -10,24 +10,26 @@
 
 
     <ScrollView
+        android:id="@+id/ScrollViewFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
+
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/requestHeader"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/requestitems_border"
-                android:minWidth="300dp"
-                android:minHeight="150dp">
+                android:padding="10dp"
+                android:paddingBottom="30dp">
 
                 <TextView
                     android:id="@+id/MyRequest"
@@ -35,8 +37,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="36dp"
                     android:layout_marginLeft="36dp"
-                    android:layout_marginTop="28dp"
+                    android:layout_marginTop="20dp"
+                    android:padding="8dp"
                     android:text="MyRequests"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -44,18 +49,21 @@
                     android:id="@+id/NewRequestBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="134dp"
-                    android:layout_marginLeft="134dp"
                     android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@drawable/button_border_new"
+                    android:padding="5dp"
                     android:text="NEW REQUEST"
-                    app:layout_constraintStart_toEndOf="@+id/MyRequest"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/SearchLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="16dp"
                     android:background="@drawable/search_cons_border"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/NewRequestBtn">
@@ -66,18 +74,22 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="36dp"
                         android:layout_marginLeft="36dp"
-                        android:layout_marginTop="21dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="21dp"
                         android:hint="Search"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <SearchView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="223dp"
-                        android:layout_marginLeft="223dp"
                         android:layout_marginTop="8dp"
-                        app:layout_constraintStart_toEndOf="@+id/SearchText"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginBottom="4dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </android.support.constraint.ConstraintLayout>
             </android.support.constraint.ConstraintLayout>
@@ -87,17 +99,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/requestitems_border"
-                android:minHeight="80dp"
+                android:padding="10dp"
                 app:layout_constraintEnd_toEndOf="parent">
 
 
                 <ImageView
                     android:id="@+id/Filter_Icon"
-                    android:layout_width="88dp"
-                    android:layout_height="53dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="8dp"
                     android:src="@drawable/filter_icon"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -108,8 +120,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="8dp"
                     android:text="Filter"
+                    android:textColor="#505050"
+                    android:textSize="12dp"
                     app:layout_constraintStart_toEndOf="@+id/Filter_Icon"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -121,6 +135,8 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="12dp"
                     android:text="Showing Approval results"
+                    android:textColor="#505050"
+                    android:textSize="12dp"
                     app:layout_constraintStart_toEndOf="@+id/Filter_Icon"
                     app:layout_constraintTop_toBottomOf="@+id/FilterText" />
             </android.support.constraint.ConstraintLayout>
@@ -128,37 +144,40 @@
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/ListViewLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:background="@drawable/requestitems_border">
 
                 <ListView
                     android:id="@+id/RequestListView"
                     android:layout_width="match_parent"
-                    android:layout_height="218dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="2dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0"
                     tools:layout_marginLeft="0dp" />
             </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+
                 android:background="@drawable/requestitems_border"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="10dp"
                 tools:layout_editor_absoluteY="456dp">
 
                 <TextView
                     android:id="@+id/ShowMore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="128dp"
-                    android:layout_marginLeft="128dp"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:padding="5dp"
                     android:text="SHOW MORE"
+                    android:textColor="#909090"
+                    android:textSize="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -168,11 +187,14 @@
                     android:layout_height="20dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
                     android:src="@drawable/dropdown_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/ShowMore"
                     app:layout_constraintTop_toTopOf="parent" />
             </android.support.constraint.ConstraintLayout>
+
         </LinearLayout>
     </ScrollView>
 

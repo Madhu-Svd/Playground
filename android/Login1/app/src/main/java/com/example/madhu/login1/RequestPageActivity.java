@@ -24,116 +24,19 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.madhu.login1.Delegates.RequestDelegate;
 import com.example.madhu.login1.global.RequestStatus;
 import com.example.madhu.login1.model.Request_Model;
 
+import java.io.Console;
 import java.util.ArrayList;
 
 public class RequestPageActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
-//    android.widget.ListPopupWindow listPopupWindow;
-//    ListView listView;
-//    Button newrequest;
-//    TextView showMoreText;
-//    ArrayList<Request_Model> request_list=new ArrayList<>();
-
-//    public static final String KEY_REQUESTNUMBER="RequestNumber";
-//    public static final String KEY_REQUESTSTATUS="requestStatus";
-//    public static final String KEY_REQUESTDATE = "RequestDate";
+        implements NavigationView.OnNavigationItemSelectedListener, RequestDelegate {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request_page_activity);
-//        final ArrayList<Request_Model> request_list=new ArrayList<>();
-//
-//
-//        newrequest=findViewById(R.id.NewRequestBtn);
-//        showMoreText=findViewById(R.id.ShowMore);
-//        ImageView filter_image =(ImageView) findViewById(R.id.Filter_Icon);
-//        ImageView bell_image=(ImageView) findViewById(R.id.bellicon);
-//        listPopupWindow=new android.widget.ListPopupWindow(getApplicationContext());
-//        final TextView listpopup=(TextView)findViewById(R.id.popupmenu);
-//        listView=findViewById(R.id.RequestListView);
-//        String[] items={"CLEAR","APPROVED","AWATING","DRAFT","REJECTED"};
-//
-//        Request_Model request_model=new Request_Model();
-//        request_model.setRequestNumber("PUR-2019-056");
-//        request_model.setRequestStatus(RequestStatus.AWAITING_APPROVAL);
-//        request_model.setRequestDate("21-05-2019");
-//        request_list.add(request_model);
-//
-//        request_model=new Request_Model();
-//        request_model.setRequestNumber("PUR-2019-057");
-//        request_model.setRequestStatus(RequestStatus.APPROVED);
-//        request_model.setRequestDate("21-05-2019");
-//        request_list.add(request_model);
-//
-//        request_model=new Request_Model();
-//        request_model.setRequestNumber("PUR-2019-058");
-//        request_model.setRequestStatus(RequestStatus.REJECTED);
-//        request_model.setRequestDate("21-05-2019");
-//        request_list.add(request_model);
-//
-//        request_model=new Request_Model();
-//        request_model.setRequestNumber("PUR-2019-059");
-//        request_model.setRequestStatus(RequestStatus.DRAFT);
-//        request_model.setRequestDate("21-05-2019");
-//        request_list.add(request_model);
-//
-//        ListAdapter adapter=new MyListAdapter(getApplicationContext(),request_list);
-//        listView.setAdapter(adapter);
-//
-////        ListAdapter adapter=new ArrayAdapter<>(getApplicationContext(),R.layout.list_popup_menu,items_list);
-////        listView.setAdapter(adapter);
-//        listPopupWindow.setAdapter(new ArrayAdapter(getApplicationContext(),R.layout.list_popup_menu,items));
-//        listPopupWindow.setAnchorView(filter_image);
-//        listPopupWindow.setModal(true);
-//        filter_image.setOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View v) {
-//                listPopupWindow.show();
-//            }
-//        });
-//        newrequest.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent=new Intent(getApplicationContext(),RequisitionForm.class);
-//                startActivity(intent);
-//            }
-//        });
-//
-//
-//        showMoreText.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent=new Intent(getApplicationContext(),RecyclerViewActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//
-//
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapter, View view, int position, long arg) {
-//
-//                Request_Model request_model=request_list.get(position);
-//                Intent intent = new Intent(getApplicationContext(), RequisitionForm_Items_List.class);
-//
-//                Bundle requestDataBundle=new Bundle();
-//                requestDataBundle.putString(KEY_REQUESTNUMBER,request_model.getRequestNumber());
-//                requestDataBundle.putString(KEY_REQUESTDATE,request_model.getRequestDate());
-//                requestDataBundle.putString(KEY_REQUESTSTATUS,request_model.getRequestStatus().toString());
-//                intent.putExtra("request_model",requestDataBundle);
-//                startActivity(intent);
-//            }
-//        });
-
-
-
-
-
-
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -155,23 +58,32 @@ public class RequestPageActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-    }
 
-    public void RequestPage(View view){
-        Fragment myFragment=new RequestPage_Fragment();
+        RequestPage_Fragment myFragment=new RequestPage_Fragment();
+        myFragment.setRequestDelegate(this);
         FragmentManager fragmentManager=getSupportFragmentManager();
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fragment_place,myFragment);
         fragmentTransaction.commit();
     }
-//
-public void RequestView(View view) {
-        Fragment myFragment = new RequestView_Fragment();
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_place, myFragment);
+
+    public void RequestPage(View view){
+        RequestPage_Fragment myFragment=new RequestPage_Fragment();
+        myFragment.setRequestDelegate(this);
+        FragmentManager fragmentManager=getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_place,myFragment);
         fragmentTransaction.commit();
-}
+
+    }
+//
+//public void RequestView(View view) {
+//        Fragment myFragment = new RequestView_Fragment();
+//        FragmentManager fragmentManager = getSupportFragmentManager();
+//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//        fragmentTransaction.replace(R.id.fragment_place, myFragment);
+//        fragmentTransaction.commit();
+//}
 
 
     @Override
@@ -229,5 +141,15 @@ public void RequestView(View view) {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void OnClickRequestItem(Request_Model requestModel) {
+        int i = 0;
+        Fragment myFragment = new RequestView_Fragment();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_place, myFragment);
+        fragmentTransaction.commit();
     }
 }

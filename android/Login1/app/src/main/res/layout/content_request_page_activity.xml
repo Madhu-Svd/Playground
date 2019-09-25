@@ -10,45 +10,24 @@
     tools:showIn="@layout/app_bar_request_page_activity">
 
 
-    <Button
-        android:id="@+id/requesPagefragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:onClick="RequestPage"
-        android:text="request Page"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/requestViewfragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:onClick="RequestView"
-        android:text="go to requsetView"
-        app:layout_constraintStart_toEndOf="@+id/requesPagefragment"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <FrameLayout
         android:id="@+id/RP_FrameLayout"
         android:layout_width="match_parent"
-        android:layout_height="457dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/requesPagefragment">
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <fragment
             android:id="@+id/fragment_place"
             android:name="com.example.madhu.login1.RequestPage_Fragment"
             android:layout_width="match_parent"
-            android:layout_height="471dp"
+            android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/requestViewfragment" />
+            app:layout_constraintStart_toStartOf="parent" />
 
 
     </FrameLayout>
