@@ -122,12 +122,12 @@ public class RequestPage_Fragment extends Fragment {
                     requestDelegate.OnClickRequestItem(request_model);
 
                 }
-//                Bundle bundle=new Bundle();
+                Bundle bundle=new Bundle();
 //                RequestView_Fragment requestView_fragment=new RequestView_Fragment();
 //                requestView_fragment.setArguments(bundle);
-                /*Intent intent = new Intent(rootView.getContext(), RequestView_Fragment.class);
+//                Intent intent = new Intent(rootView.getContext(), RequestView_Fragment.class);
 
-                Bundle requestDataBundle=new Bundle();
+               /* Bundle requestDataBundle=new Bundle();
                 requestDataBundle.putString(KEY_REQUESTNUMBER,request_model.getRequestNumber());
                 requestDataBundle.putString(KEY_REQUESTDATE,request_model.getRequestDate());
                 requestDataBundle.putString(KEY_REQUESTSTATUS,request_model.getRequestStatus().toString());
@@ -137,6 +137,7 @@ public class RequestPage_Fragment extends Fragment {
         });
 
         return rootView;
+
     }
 
     public void setRequestDelegate(RequestDelegate requestDelegate){

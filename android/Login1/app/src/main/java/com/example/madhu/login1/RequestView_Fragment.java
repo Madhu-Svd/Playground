@@ -61,11 +61,46 @@ ArrayList<Request_Model> RQView_list=new ArrayList<>();
         request_model.setItemsDate("5-05-2019");
         request_model.setItemsCost("RS 45,000");
         RQView_list.add(request_model);
+
+        request_model=new Request_Model();
+        request_model.setItemsDescription("Lorem ipsum dolor sit amet,consectetur adipscing elit.Mauris mattis,tortor sit amet tempor vehicula. ");
+        request_model.setItemsNumber("01");
+        request_model.setItemsDate("5-05-2019");
+        request_model.setItemsCost("RS 45,000");
+        RQView_list.add(request_model);
+
+        request_model=new Request_Model();
+        request_model.setItemsDescription("Lorem ipsum dolor sit amet,consectetur adipscing elit.Mauris mattis,tortor sit amet tempor vehicula. ");
+        request_model.setItemsNumber("01");
+        request_model.setItemsDate("5-05-2019");
+        request_model.setItemsCost("RS 45,000");
+        RQView_list.add(request_model);
+
+        request_model=new Request_Model();
+        request_model.setItemsDescription("Lorem ipsum dolor sit amet,consectetur adipscing elit.Mauris mattis,tortor sit amet tempor vehicula. ");
+        request_model.setItemsNumber("01");
+        request_model.setItemsDate("5-05-2019");
+        request_model.setItemsCost("RS 45,000");
+        RQView_list.add(request_model);
+
+        request_model=new Request_Model();
+        request_model.setItemsDescription("Lorem ipsum dolor sit amet,consectetur adipscing elit.Mauris mattis,tortor sit amet tempor vehicula. ");
+        request_model.setItemsNumber("01");
+        request_model.setItemsDate("5-05-2019");
+        request_model.setItemsCost("RS 45,000");
+        RQView_list.add(request_model);
+
+        request_model=new Request_Model();
+        request_model.setItemsDescription("Lorem ipsum dolor sit amet,consectetur adipscing elit.Mauris mattis,tortor sit amet tempor vehicula. ");
+        request_model.setItemsNumber("01");
+        request_model.setItemsDate("5-05-2019");
+        request_model.setItemsCost("RS 45,000");
+        RQView_list.add(request_model);
 //        ListAdapter adapter=new MyListAdapter(getContext(),RQView_list);
 
         ListAdapter adapter=new ListAdapterFragment(rootview.getContext(),RQView_list);
         RQ_View_Listview.setAdapter(adapter);
-
+        return rootview;
 //        Bundle requestBundle =getArguments();
 //
 //        String Requestnumber = requestBundle.getString("RequestNumber");
@@ -74,13 +109,8 @@ ArrayList<Request_Model> RQView_list=new ArrayList<>();
 //        RQ_Date.setText(RequestDate);
 //        String RequestStatus = requestBundle.getString("requestStatus");
 //        RQ_Status.setText(RequestStatus);
-        return rootview;
-//        RQ_View_Listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//
-//            }
-//        });
+
+
 
 
 

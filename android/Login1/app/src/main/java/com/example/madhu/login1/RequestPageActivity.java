@@ -1,6 +1,8 @@
 package com.example.madhu.login1;
 
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -23,6 +25,7 @@ import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.madhu.login1.Delegates.RequestDelegate;
 import com.example.madhu.login1.global.RequestStatus;
@@ -32,7 +35,7 @@ import java.io.Console;
 import java.util.ArrayList;
 
 public class RequestPageActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, RequestDelegate {
+        implements NavigationView.OnNavigationItemSelectedListener, RequestDelegate{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,32 +62,28 @@ public class RequestPageActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        RequestPage_Fragment myFragment=new RequestPage_Fragment();
-        myFragment.setRequestDelegate(this);
-        FragmentManager fragmentManager=getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_place,myFragment);
-        fragmentTransaction.commit();
+//        if(getResources().getConfiguration().orientation==Configuration.ORIENTATION_PORTRAIT){
+//            finish();
+//            return;
+//        }
+//        if(savedInstanceState==null) {
+//        }  myFragment.setArguments(getIntent().getExtras());
+
+            RequestPage_Fragment myFragment = new RequestPage_Fragment();
+            myFragment.setRequestDelegate(this);
+            getSupportFragmentManager().beginTransaction().add(R.id.RP_FrameLayout,myFragment).commit();
     }
 
-    public void RequestPage(View view){
-        RequestPage_Fragment myFragment=new RequestPage_Fragment();
-        myFragment.setRequestDelegate(this);
-        FragmentManager fragmentManager=getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_place,myFragment);
-        fragmentTransaction.commit();
-
-    }
+//    @Override
+//    public void onConfigurationChanged(Configuration newConfig){
+//        super.onConfigurationChanged(newConfig);
 //
-//public void RequestView(View view) {
-//        Fragment myFragment = new RequestView_Fragment();
-//        FragmentManager fragmentManager = getSupportFragmentManager();
-//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//        fragmentTransaction.replace(R.id.fragment_place, myFragment);
-//        fragmentTransaction.commit();
-//}
-
+//        if(newConfig.orientation==Configuration.ORIENTATION_LANDSCAPE){
+//            Toast.makeText(this,"landscape",Toast.LENGTH_LONG).show();
+//        }else if(newConfig.orientation==Configuration.ORIENTATION_PORTRAIT){
+//            Toast.makeText(this,"portrait",Toast.LENGTH_LONG).show();
+//        }
+//    }
 
     @Override
     public void onBackPressed() {
@@ -149,7 +148,10 @@ public class RequestPageActivity extends AppCompatActivity
         Fragment myFragment = new RequestView_Fragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_place, myFragment);
+        fragmentTransaction.replace(R.id.RV_linearLayout,myFragment);
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
+
+
 }
