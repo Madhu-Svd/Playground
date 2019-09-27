@@ -62,12 +62,6 @@ public class RequestPageActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-//        if(getResources().getConfiguration().orientation==Configuration.ORIENTATION_PORTRAIT){
-//            finish();
-//            return;
-//        }
-//        if(savedInstanceState==null) {
-//        }  myFragment.setArguments(getIntent().getExtras());
 
             RequestPage_Fragment myFragment = new RequestPage_Fragment();
             myFragment.setRequestDelegate(this);
@@ -144,14 +138,24 @@ public class RequestPageActivity extends AppCompatActivity
 
     @Override
     public void OnClickRequestItem(Request_Model requestModel) {
+
         int i = 0;
-        Fragment myFragment = new RequestView_Fragment();
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.RV_linearLayout,myFragment);
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
+        int orientation = this.getResources().getConfiguration().orientation;
+        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+            Fragment myFragment = new RequestView_Fragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.add(R.id.RP_FrameLayout, myFragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+        } else if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            Fragment myFragment = new RequestView_Fragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.RV_linearLayout, myFragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+        }
+
     }
-
-
 }

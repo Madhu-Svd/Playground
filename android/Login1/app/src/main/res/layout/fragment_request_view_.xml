@@ -193,7 +193,7 @@
                                 android:text="SUBMITTED" />
 
                             <TextView
-                                android:id="@+id/SubmittedOn"
+                                android:id="@+id/RequestDateF"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"
@@ -215,7 +215,7 @@
                                 android:text="STATUS" />
 
                             <TextView
-                                android:id="@+id/RequestStatus"
+                                android:id="@+id/RequestStatusF"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="5dp"

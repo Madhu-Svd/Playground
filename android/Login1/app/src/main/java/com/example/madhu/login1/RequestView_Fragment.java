@@ -19,6 +19,7 @@ import java.util.ArrayList;
 
 
 public class RequestView_Fragment extends Fragment {
+
     TextView RQ_No,RQ_Date,RQ_Status;
     private View rootview;
     ListView RQ_View_Listview;
@@ -29,10 +30,11 @@ ArrayList<Request_Model> RQView_list=new ArrayList<>();
         // Inflate the layout for this fragment
         rootview= inflater.inflate(R.layout.fragment_request_view_, container, false);
 //
-        RQ_No=rootview.findViewById(R.id.Requestnumber);
-        RQ_Date=rootview.findViewById(R.id.RequestDate);
-        RQ_Status=rootview.findViewById(R.id.RequestStatus);
+        RQ_No=rootview.findViewById(R.id.RequestNumber);
+        RQ_Date=rootview.findViewById(R.id.RequestDateF);
+        RQ_Status=rootview.findViewById(R.id.RequestStatusF);
         RQ_View_Listview=rootview.findViewById(R.id.ListViewFragment);
+
 
         Request_Model request_model=new Request_Model();
         request_model.setItemsDescription("Lorem ipsum dolor sit amet,consectetur adipscing elit.Mauris mattis,tortor sit amet tempor vehicula. ");
@@ -100,19 +102,17 @@ ArrayList<Request_Model> RQView_list=new ArrayList<>();
 
         ListAdapter adapter=new ListAdapterFragment(rootview.getContext(),RQView_list);
         RQ_View_Listview.setAdapter(adapter);
-        return rootview;
-//        Bundle requestBundle =getArguments();
-//
-//        String Requestnumber = requestBundle.getString("RequestNumber");
-//        RQ_No.setText(Requestnumber);
-//        String RequestDate = requestBundle.getString("RequestDate");
-//        RQ_Date.setText(RequestDate);
-//        String RequestStatus = requestBundle.getString("requestStatus");
-//        RQ_Status.setText(RequestStatus);
 
+        Bundle requestdataBundle =getArguments();
+        if(requestdataBundle!=null) {
+            String Requestnumber = requestdataBundle.getString("RequestNumber");
+            RQ_No.setText(Requestnumber);
+            String RequestDate = requestdataBundle.getString("RequestDate");
+            RQ_Date.setText(RequestDate);
+            String RequestStatus = requestdataBundle.getString("requestStatus");
+            RQ_Status.setText(RequestStatus);
+        }
+            return rootview;
+        }
 
-
-
-
-    }
 }

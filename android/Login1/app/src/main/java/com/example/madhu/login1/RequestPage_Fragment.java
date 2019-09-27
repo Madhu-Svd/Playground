@@ -116,13 +116,17 @@ public class RequestPage_Fragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapter, View view, int position, long arg) {
-
+                RequestView_Fragment myFragment=new RequestView_Fragment();
                 Request_Model request_model=request_list.get(position);
+                Bundle requestDataBundle=new Bundle();
+                requestDataBundle.putString(KEY_REQUESTNUMBER,request_model.getRequestNumber());
+                requestDataBundle.putString(KEY_REQUESTDATE,request_model.getRequestDate());
+                requestDataBundle.putString(KEY_REQUESTSTATUS,request_model.getRequestStatus().toString());
+                myFragment.setArguments(requestDataBundle);
                 if(requestDelegate != null){
                     requestDelegate.OnClickRequestItem(request_model);
 
                 }
-                Bundle bundle=new Bundle();
 //                RequestView_Fragment requestView_fragment=new RequestView_Fragment();
 //                requestView_fragment.setArguments(bundle);
 //                Intent intent = new Intent(rootView.getContext(), RequestView_Fragment.class);
