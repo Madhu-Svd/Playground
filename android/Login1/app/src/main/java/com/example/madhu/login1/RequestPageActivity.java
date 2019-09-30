@@ -148,6 +148,7 @@ public class RequestPageActivity extends AppCompatActivity
             fragmentTransaction.add(R.id.RP_FrameLayout, myFragment);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
+            ((RequestView_Fragment) myFragment).setData(requestModel);
         } else if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
             Fragment myFragment = new RequestView_Fragment();
             FragmentManager fragmentManager = getSupportFragmentManager();
@@ -155,6 +156,8 @@ public class RequestPageActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.RV_linearLayout, myFragment);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
+            ((RequestView_Fragment) myFragment).setData(requestModel);
+
         }
 
     }

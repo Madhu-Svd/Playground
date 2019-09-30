@@ -24,8 +24,7 @@ import java.util.ArrayList;
 
 
 public class RequestPage_Fragment extends Fragment {
-  private View rootView;
-  private TextView textView;
+    private View rootView;
     android.widget.ListPopupWindow listPopupWindow;
     ListView listView;
     Button newrequest;
@@ -44,8 +43,6 @@ public class RequestPage_Fragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
        rootView= inflater.inflate(R.layout.fragment_request_page_, container, false);
-
-        textView=rootView.findViewById(R.id.MyRequest);
 
         newrequest=rootView.findViewById(R.id.NewRequestBtn);
         showMoreText=rootView.findViewById(R.id.ShowMore);
@@ -116,27 +113,11 @@ public class RequestPage_Fragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapter, View view, int position, long arg) {
-                RequestView_Fragment myFragment=new RequestView_Fragment();
                 Request_Model request_model=request_list.get(position);
-                Bundle requestDataBundle=new Bundle();
-                requestDataBundle.putString(KEY_REQUESTNUMBER,request_model.getRequestNumber());
-                requestDataBundle.putString(KEY_REQUESTDATE,request_model.getRequestDate());
-                requestDataBundle.putString(KEY_REQUESTSTATUS,request_model.getRequestStatus().toString());
-                myFragment.setArguments(requestDataBundle);
                 if(requestDelegate != null){
                     requestDelegate.OnClickRequestItem(request_model);
 
                 }
-//                RequestView_Fragment requestView_fragment=new RequestView_Fragment();
-//                requestView_fragment.setArguments(bundle);
-//                Intent intent = new Intent(rootView.getContext(), RequestView_Fragment.class);
-
-               /* Bundle requestDataBundle=new Bundle();
-                requestDataBundle.putString(KEY_REQUESTNUMBER,request_model.getRequestNumber());
-                requestDataBundle.putString(KEY_REQUESTDATE,request_model.getRequestDate());
-                requestDataBundle.putString(KEY_REQUESTSTATUS,request_model.getRequestStatus().toString());
-                intent.putExtra("request_model",requestDataBundle);
-                startActivity(intent);*/
             }
         });
 
