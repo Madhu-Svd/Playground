@@ -36,6 +36,7 @@ import java.util.ArrayList;
 
 public class RequestPageActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, RequestDelegate{
+    private static final String TAG="RequestViewFRAGMENT";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,16 +69,32 @@ public class RequestPageActivity extends AppCompatActivity
             getSupportFragmentManager().beginTransaction().add(R.id.RP_FrameLayout,myFragment).commit();
     }
 
-//    @Override
-//    public void onConfigurationChanged(Configuration newConfig){
-//        super.onConfigurationChanged(newConfig);
-//
-//        if(newConfig.orientation==Configuration.ORIENTATION_LANDSCAPE){
-//            Toast.makeText(this,"landscape",Toast.LENGTH_LONG).show();
-//        }else if(newConfig.orientation==Configuration.ORIENTATION_PORTRAIT){
-//            Toast.makeText(this,"portrait",Toast.LENGTH_LONG).show();
-//        }
-//    }
+    @Override
+    public void onConfigurationChanged(Configuration newConfig){
+        super.onConfigurationChanged(newConfig);
+
+        if(newConfig.orientation==Configuration.ORIENTATION_LANDSCAPE){
+            Fragment myFragment = new RequestView_Fragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.RV_linearLayout, myFragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+        }else if(newConfig.orientation==Configuration.ORIENTATION_PORTRAIT){
+            Fragment myFragment = new RequestView_Fragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.add(R.id.RP_FrameLayout, myFragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+
+//            RequestView_Fragment myFragment = (RequestView_Fragment) getSupportFragmentManager().findFragmentByTag(TAG);
+//            if(myFragment != null)
+//                getSupportFragmentManager().beginTransaction().remove(myFragment).commit();
+////            getSupportFragmentManager().beginTransaction().add(myFragment).commit();
+
+        }
+    }
 
     @Override
     public void onBackPressed() {

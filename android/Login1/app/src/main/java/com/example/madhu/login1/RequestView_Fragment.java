@@ -36,10 +36,11 @@ public class RequestView_Fragment extends Fragment {
         RQ_Date = rootview.findViewById(R.id.RequestDateF);
         RQ_Status = rootview.findViewById(R.id.RequestStatusF);
         RQ_View_Listview = rootview.findViewById(R.id.ListViewFragment);
-
-        RQ_No.setText(requestModel.getRequestNumber());
-        RQ_Date.setText(requestModel.getRequestDate());
-        RQ_Status.setText(requestModel.getRequestStatus().toString());
+        if (requestModel != null) {
+            RQ_No.setText(requestModel.getRequestNumber());
+            RQ_Date.setText(requestModel.getRequestDate());
+            RQ_Status.setText(requestModel.getRequestStatus().toString());
+        }
 
 
         Request_Model request_model = new Request_Model();

@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +20,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".ForgotPassword1" />
         <activity android:name=".ForgotPassword2" />
         <activity android:name=".Login1AlertDialog" />
@@ -30,7 +30,6 @@
         <!-- <activity android:name=".RecyclerView" /> -->
         <activity android:name=".RecyclerViewActivity" />
         <activity android:name=".RequestJSON_Activity" />
-        
         <activity
             android:name=".RequisitionForm"
             android:label="@string/title_activity_requisition_form"
@@ -45,8 +44,12 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".RequestPageActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_request_page_fragment"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SaveDraft_AckOne">
+
+        </activity>
     </application>
 
 </manifest>
