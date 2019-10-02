@@ -37,6 +37,11 @@ public class RequestPage_Fragment extends Fragment {
 
     private RequestDelegate requestDelegate;
 
+    protected void onSavedInsatnceState(Bundle outState){
+        super.onSaveInstanceState(outState);
+
+        outState.putString("listView", String.valueOf(listView));
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -52,6 +57,7 @@ public class RequestPage_Fragment extends Fragment {
         final TextView listpopup=(TextView)rootView.findViewById(R.id.popupmenu);
         listView=rootView.findViewById(R.id.RequestListView);
         String[] items={"CLEAR","APPROVED","AWATING","DRAFT","REJECTED"};
+
 
         Request_Model request_model=new Request_Model();
         request_model.setRequestNumber("PUR-2019-056");
@@ -125,8 +131,12 @@ public class RequestPage_Fragment extends Fragment {
 
     }
 
+
+
     public void setRequestDelegate(RequestDelegate requestDelegate){
         this.requestDelegate = requestDelegate;
     }
+
+
 
 }

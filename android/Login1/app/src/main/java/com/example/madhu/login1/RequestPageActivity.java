@@ -18,14 +18,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
+
 
 import com.example.madhu.login1.Delegates.RequestDelegate;
 import com.example.madhu.login1.global.RequestStatus;
@@ -65,34 +58,32 @@ public class RequestPageActivity extends AppCompatActivity
 
 
             RequestPage_Fragment myFragment = new RequestPage_Fragment();
+
             myFragment.setRequestDelegate(this);
-            getSupportFragmentManager().beginTransaction().add(R.id.RP_FrameLayout,myFragment).commit();
+            FragmentManager fragmentManager=getSupportFragmentManager();
+            fragmentManager.popBackStackImmediate(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+            fragmentTransaction.add(R.id.RP_FrameLayout,myFragment).commit();
     }
 
     @Override
-    public void onConfigurationChanged(Configuration newConfig){
-        super.onConfigurationChanged(newConfig);
+            public void onConfigurationChanged(Configuration newConfig){
+                super.onConfigurationChanged(newConfig);
 
-        if(newConfig.orientation==Configuration.ORIENTATION_LANDSCAPE){
-            Fragment myFragment = new RequestView_Fragment();
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.RV_linearLayout, myFragment);
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
-        }else if(newConfig.orientation==Configuration.ORIENTATION_PORTRAIT){
-            Fragment myFragment = new RequestView_Fragment();
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.add(R.id.RP_FrameLayout, myFragment);
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
-
-//            RequestView_Fragment myFragment = (RequestView_Fragment) getSupportFragmentManager().findFragmentByTag(TAG);
-//            if(myFragment != null)
-//                getSupportFragmentManager().beginTransaction().remove(myFragment).commit();
-////            getSupportFragmentManager().beginTransaction().add(myFragment).commit();
-
+                if(newConfig.orientation==Configuration.ORIENTATION_LANDSCAPE){
+                    Fragment myFragment = new RequestView_Fragment();
+                    FragmentManager fragmentManager = getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.RV_linearLayout, myFragment);
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
+                }else if(newConfig.orientation==Configuration.ORIENTATION_PORTRAIT){
+                    Fragment myFragment = new RequestView_Fragment();
+                    FragmentManager fragmentManager = getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.add(R.id.RP_FrameLayout, myFragment);
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
         }
     }
 
@@ -153,6 +144,10 @@ public class RequestPageActivity extends AppCompatActivity
         return true;
     }
 
+protected void onSavedInstanceState(Bundle OutState){
+        super.onSaveInstanceState(OutState);
+
+}
     @Override
     public void OnClickRequestItem(Request_Model requestModel) {
 
@@ -169,6 +164,7 @@ public class RequestPageActivity extends AppCompatActivity
         } else if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
             Fragment myFragment = new RequestView_Fragment();
             FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.popBackStack(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.RV_linearLayout, myFragment);
             fragmentTransaction.addToBackStack(null);
