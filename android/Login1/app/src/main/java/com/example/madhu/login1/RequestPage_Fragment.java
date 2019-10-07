@@ -37,11 +37,11 @@ public class RequestPage_Fragment extends Fragment {
 
     private RequestDelegate requestDelegate;
 
-    protected void onSavedInsatnceState(Bundle outState){
-        super.onSaveInstanceState(outState);
-
-        outState.putString("listView", String.valueOf(listView));
-    }
+//    protected void onSavedInsatnceState(Bundle outState){
+//        super.onSaveInstanceState(outState);
+//
+//        outState.putString("listView", String.valueOf(listView));
+//    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

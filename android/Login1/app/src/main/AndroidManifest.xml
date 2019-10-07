@@ -46,9 +46,8 @@
             android:name=".RequestPageActivity"
             android:label="@string/title_activity_request_page_fragment"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SaveDraft_AckOne">
-
-        </activity>
+        <activity android:name=".SaveDraft_AckOne"></activity>
+        <activity android:name=".FragmentLifeCycle"></activity>
     </application>
 
 </manifest>

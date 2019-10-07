@@ -61,31 +61,34 @@ public class RequestPageActivity extends AppCompatActivity
 
             myFragment.setRequestDelegate(this);
             FragmentManager fragmentManager=getSupportFragmentManager();
-            fragmentManager.popBackStackImmediate(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
+//            fragmentManager.popBackStackImmediate(null,FragmentManager.POP_BACK_STACK_INCLUSIVE);
             FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
             fragmentTransaction.add(R.id.RP_FrameLayout,myFragment).commit();
     }
-
-    @Override
-            public void onConfigurationChanged(Configuration newConfig){
-                super.onConfigurationChanged(newConfig);
-
-                if(newConfig.orientation==Configuration.ORIENTATION_LANDSCAPE){
-                    Fragment myFragment = new RequestView_Fragment();
-                    FragmentManager fragmentManager = getSupportFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.RV_linearLayout, myFragment);
-                    fragmentTransaction.addToBackStack(null);
-                    fragmentTransaction.commit();
-                }else if(newConfig.orientation==Configuration.ORIENTATION_PORTRAIT){
-                    Fragment myFragment = new RequestView_Fragment();
-                    FragmentManager fragmentManager = getSupportFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.add(R.id.RP_FrameLayout, myFragment);
-                    fragmentTransaction.addToBackStack(null);
-                    fragmentTransaction.commit();
-        }
-    }
+//
+//    @Override
+//            public void onConfigurationChanged(Configuration newConfig){
+//                super.onConfigurationChanged(newConfig);
+//
+//                if(newConfig.orientation==Configuration.ORIENTATION_LANDSCAPE){
+//                    Fragment myFragment = new RequestView_Fragment();
+//
+//                    FragmentManager fragmentManager = getSupportFragmentManager();
+//                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                    fragmentTransaction.replace(R.id.RV_linearLayout, myFragment);
+//                    fragmentTransaction.addToBackStack(null);
+//                    fragmentTransaction.commit();
+//
+//                }
+//                else if(newConfig.orientation==Configuration.ORIENTATION_PORTRAIT){
+//                    Fragment myFragment = new RequestView_Fragment();
+//                    FragmentManager fragmentManager = getSupportFragmentManager();
+//                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                    fragmentTransaction.add(R.id.RP_FrameLayout, myFragment);
+//                    fragmentTransaction.addToBackStack(null);
+//                    fragmentTransaction.commit();
+//        }
+//    }
 
     @Override
     public void onBackPressed() {
