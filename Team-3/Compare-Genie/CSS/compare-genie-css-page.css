@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+html body{
+   
+    margin: auto; 
+    font-family: Roboto; 
+}
+.add_Parameter_popup{
+    border: 1px solid;
+    width: 25%;
+    margin: auto;
+    display: none; 
+    border-radius: 25px 25px 25px 25px;
+}
+.top{
+    background-color:#FCFCFC;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 25px 25px 0px 0px;
+    border-color: black;
+    padding: 3%;
+}
+.cancel-icon{
+    width: 33px;
+    height: 33px;
+}
+.middle{
+    background-color: #FFFFFF;
+    padding: 3%;
+}
+.middle p{
+    align-items: center;
+    font-size: 16px;
+}
+.bottom{
+    background-color:#FCFCFC;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0px 0px 37px 37px;
+    padding: 4%;
+}
+.bottom button[type="button"]{
+    border-radius: 29px;
+    background-color: #32BDD2;
+    color: #FFFFFF;
+    padding:2% 3%;
+    width: 60px;
+    height: 30px;
+    font-weight: bold;
+    font-family: roboto;
+    float: right;
+}
+.bottom a{
+    letter-spacing: 1.2px;
+    color: #5A5A5A;
+    font-size: 1.1vw;
+    font-weight: bold;
+}
+.bottom span{
+    letter-spacing: 1px;
+    color: #5A5A5A;
+    font-size: .7vw;
+    padding-top:2%;
+   
+}
+.add_Product_popup{
+    border: 1px solid;
+    width: 25%;
+    margin: auto;
+    display: none; 
+    border-radius: 25px 25px 25px 25px;
+}
