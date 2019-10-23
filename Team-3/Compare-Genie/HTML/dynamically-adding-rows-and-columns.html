@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Compare-Genie</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../CSS/dynamically-adding-rows-and-columns.css" />
+</head>
+
+<body>
+    <div style="min-height: 8vh"></div>
+    <div class="main-container">
+        <div class="header">
+            <div class="header-text"></div>
+            <p style="font-weight: bold">COMPARE-GENIE</p>
+        </div>
+
+        <div style="clear: both"></div>
+        <div style="min-height: 6vh"></div>
+
+        <form>
+            <table id="display" border="1" class="table">
+                <thead>
+                    <tr>
+                        <th>Add Parameter<img src="../IMAGES/request-icons-10.png" height="30" width="30"
+                                alt="cancel-image" id="addParameter"></th>
+                        <th>product1<img src="../IMAGES/request-icons-10.png" height="30" width="30" alt="cancel-image"
+                                id="addProduct"></th>
+
+                    </tr>
+                </thead>
+
+            </table>
+        </form>
+        <div class="add_Parameter_popup">
+
+            <div class="top">
+                <div>
+                    <p><b>Add Parameter</b></p>
+                </div>
+                <div><img src="../IMAGES/request-icons-13.png" height="30" width="30" id="cancel-icon" alt="cancel-image">
+                </div>
+            </div>
+
+            <div class="middle">
+                <p style="padding: 5px">Enter a Parameter</p>
+                <input type="text" id="parameter" style="padding: 10px">
+                <div style="min-height: 5vh"></div>
+            </div>
+
+            <div class="bottom">
+                <div style="width:10%"><a href="#" id="parameter-cancel-text">CANCEL</a></div>
+                <div><button type="button" id="add">ADD</button></div>
+            </div>
+
+        </div>
+        <div class="add_Product_popup">
+
+            <div class="top">
+                <div>
+                    <p><b>Add Product</b></p>
+                </div>
+                <div><img src="../IMAGES/request-icons-13.png" height="30" width="30" id="cancel-icon-product"
+                        alt="cancel-image">
+                </div>
+            </div>
+
+            <div class="middle">
+                <p style="padding: 5px">Enter a Product</p>
+                <input type="text" id="product" style="padding: 10px">
+                <div style="min-height: 5vh"></div>
+            </div>
+
+            <div class="bottom">
+                <div style="width:10%"><a href="#" id="product-cancel-text">CANCEL</a></div>
+                <div><button type="button" id="productAdd" style="padding-left: 10px"
+                        onclick="addColumn('display')">ADD</button></div>
+            </div>
+
+        </div>
+        <div style="min-height: 6vh"></div>
+    </div>
+
+</body>
+<script>
+    function addColumn(tblId) {
+        var tblHeadObj = document.getElementById(tblId).tHead;
+        for (var h = 0; h < tblHeadObj.rows.length; h++) {
+            var newTH = document.createElement('th');
+            tblHeadObj.rows[h].appendChild(newTH);
+            newTH.innerHTML = 'product';
+        }
+
+    }
+    var entry = document.getElementById("add");
+    entry.addEventListener("click", displayDetails);
+
+    var row = 1;
+
+    function displayDetails() {
+        var addParameter1 = document.getElementById("parameter").value;
+
+        var display = document.getElementById("display");
+        var newRow = display.insertRow(row);
+
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+
+        cell1.innerHTML = addParameter1;
+        cell2.insertHTML = addParameter1;
+        row++;
+    }
+
+    document.getElementById("addParameter").addEventListener("click", function () {
+        document.querySelector(".add_Parameter_popup").style.display = "block";
+    })
+    document.getElementById("add").addEventListener("click", function () {
+        document.querySelector(".add_Parameter_popup").style.display = "none";
+    })
+    document.getElementById("addProduct").addEventListener("click", function () {
+        document.querySelector(".add_Product_popup").style.display = "block";
+    })
+    document.getElementById("productAdd").addEventListener("click", function () {
+        document.querySelector(".add_Product_popup").style.display = "none";
+    })
+    document.getElementById("cancel-icon").addEventListener("click", function () {
+        document.querySelector(".add_Parameter_popup").style.display = "none";
+    })
+    document.getElementById("parameter-cancel-text").addEventListener("click", function () {
+        document.querySelector(".add_Parameter_popup").style.display = "none";
+    })
+    document.getElementById("cancel-icon-product").addEventListener("click", function () {
+        document.querySelector(".add_Product_popup").style.display = "none";
+    })
+    document.getElementById("product-cancel-text").addEventListener("click", function () {
+        document.querySelector(".add_Product_popup").style.display = "none";
+    })
+</script>
+
+</html>
