@@ -24,11 +24,20 @@
                     <tr>
                         <th>Add Parameter<img src="../IMAGES/request-icons-10.png" height="30" width="30"
                                 alt="cancel-image" id="addParameter"></th>
-                        <th>product1<img src="../IMAGES/request-icons-10.png" height="30" width="30" alt="cancel-image"
+                        <th>Add Product<img src="../IMAGES/request-icons-10.png" height="30" width="30" alt="cancel-image"
                                 id="addProduct"></th>
+                        <th width="200px">Action</th>
 
                     </tr>
                 </thead>
+                <tbody class="row_drag">
+
+                        <tr id="1">
+                            <td width="100px">1</td>
+                            <td width="100px"></td>
+                            <td width="100px"></td>
+                        </tr>
+                    </tbody>
 
             </table>
         </form>
@@ -88,27 +97,30 @@
         for (var h = 0; h < tblHeadObj.rows.length; h++) {
             var newTH = document.createElement('th');
             tblHeadObj.rows[h].appendChild(newTH);
-            newTH.innerHTML = 'product';
+            newTH.innerHTML = 'Add Product <img src="../IMAGES/request-icons-10.png" height="30" width="30" alt="cancel-image" id="addProduct">';
         }
 
     }
     var entry = document.getElementById("add");
     entry.addEventListener("click", displayDetails);
 
-    var row = 1;
-
     function displayDetails() {
         var addParameter1 = document.getElementById("parameter").value;
 
         var display = document.getElementById("display");
-        var newRow = display.insertRow(row);
-
+        var newRow = display.insertRow(display.rows.length).outerHTML = ("<tr data-name='" + addParameter1 + "'><td>" + addParameter1 + "</td><td>" + addParameter1 + "</td><td><button class='btn btn-info btn-xs btn-edit'>Edit</button><button class='btn btn-danger btn-xs btn-delete' onclick='delete_row(" +newRow + ")' id='delete'>Delete</button></td></tr>");
         var cell1 = newRow.insertCell(0);
         var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
 
         cell1.innerHTML = addParameter1;
         cell2.insertHTML = addParameter1;
-        row++;
+        cell3.insertHTML = addParameter1;
+    
+    }
+    function delete_row() {
+        document.getElementById(""+newRow+"").outerHTML="";
+
     }
 
     document.getElementById("addParameter").addEventListener("click", function () {
