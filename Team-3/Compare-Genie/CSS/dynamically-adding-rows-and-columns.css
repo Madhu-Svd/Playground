@@ -91,3 +91,29 @@ html body{
     border: 0.5px solid rgb(160, 155, 155);
     padding: 2%;
 }
+.btn-edit {
+    width: 30%;
+    height: 5%;
+    background-color: #32BDD2;
+    margin-left: 25%;
+}
+.btn-delete{
+    height: 5%;
+    background-color: #32BDD2;
+   
+}
+tr{
+    cursor: pointer
+}
+.selected
+{
+    background-color: blue; 
+    color: #fff;
+    font-weight: bold
+}
+      
+button{
+    margin-top:2px;
+    background-color: #eee;
+    border: 1px solid #00F
+}

@@ -5,6 +5,8 @@
     <title>Compare-Genie</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../CSS/dynamically-adding-rows-and-columns.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 </head>
 
 <body>
@@ -14,40 +16,44 @@
             <div class="header-text"></div>
             <p style="font-weight: bold">COMPARE-GENIE</p>
         </div>
-
         <div style="clear: both"></div>
         <div style="min-height: 6vh"></div>
 
         <form>
+
             <table id="display" border="1" class="table">
+
                 <thead>
                     <tr>
                         <th>Add Parameter<img src="../IMAGES/request-icons-10.png" height="30" width="30"
                                 alt="cancel-image" id="addParameter"></th>
-                        <th>Add Product<img src="../IMAGES/request-icons-10.png" height="30" width="30" alt="cancel-image"
-                                id="addProduct"></th>
-                        <th width="200px">Action</th>
-
+                        <th>Add Product<img src="../IMAGES/request-icons-10.png" height="30" width="30"
+                                alt="cancel-image" id="addProduct"></th>
                     </tr>
                 </thead>
-                <tbody class="row_drag">
 
-                        <tr id="1">
-                            <td width="100px">1</td>
-                            <td width="100px"></td>
-                            <td width="100px"></td>
-                        </tr>
-                    </tbody>
+                <tbody class="row_drag">
+                    <tr id="1">
+                        <td width="100px">Eg:color</td>
+                        <td width="100px">Eg:Red</td>
+                    </tr>
+                </tbody>
 
             </table>
+
         </form>
+
+        <button onclick="upNdown('up');">&ShortUpArrow;</button>
+        <button onclick="upNdown('down');">&ShortDownArrow;</button>
+
         <div class="add_Parameter_popup">
 
             <div class="top">
                 <div>
                     <p><b>Add Parameter</b></p>
                 </div>
-                <div><img src="../IMAGES/request-icons-13.png" height="30" width="30" id="cancel-icon" alt="cancel-image">
+                <div><img src="../IMAGES/request-icons-13.png" height="30" width="30" id="cancel-icon"
+                        alt="cancel-image">
                 </div>
             </div>
 
@@ -63,6 +69,7 @@
             </div>
 
         </div>
+
         <div class="add_Product_popup">
 
             <div class="top">
@@ -91,6 +98,7 @@
     </div>
 
 </body>
+
 <script>
     function addColumn(tblId) {
         var tblHeadObj = document.getElementById(tblId).tHead;
@@ -99,27 +107,25 @@
             tblHeadObj.rows[h].appendChild(newTH);
             newTH.innerHTML = 'Add Product <img src="../IMAGES/request-icons-10.png" height="30" width="30" alt="cancel-image" id="addProduct">';
         }
-
+        var tblBodyObj = document.getElementById("display").tBodies[0];
+        for (var i = 0; i < tblBodyObj.rows.length; i++) {
+            var newCell = tblBodyObj.rows[i].insertCell(-1);
+            newCell.innerHTML = '';
+        }
     }
+
     var entry = document.getElementById("add");
     entry.addEventListener("click", displayDetails);
-
     function displayDetails() {
         var addParameter1 = document.getElementById("parameter").value;
 
         var display = document.getElementById("display");
-        var newRow = display.insertRow(display.rows.length).outerHTML = ("<tr data-name='" + addParameter1 + "'><td>" + addParameter1 + "</td><td>" + addParameter1 + "</td><td><button class='btn btn-info btn-xs btn-edit'>Edit</button><button class='btn btn-danger btn-xs btn-delete' onclick='delete_row(" +newRow + ")' id='delete'>Delete</button></td></tr>");
-        var cell1 = newRow.insertCell(0);
-        var cell2 = newRow.insertCell(1);
-        var cell3 = newRow.insertCell(2);
+        var newRow = display.insertRow(display.rows.length);
+        newRow.outerHTML = ("<tr data-name='" + addParameter1 + "'><td>" + addParameter1 + "</td><td><button class='btn btn-info btn-xs btn-edit'>Edit</button><button class='btn btn-danger btn-xs btn-delete'  onclick='delete_row(" + newRow + ")' id='delete'>Delete</button></td></tr>");
 
-        cell1.innerHTML = addParameter1;
-        cell2.insertHTML = addParameter1;
-        cell3.insertHTML = addParameter1;
-    
     }
     function delete_row() {
-        document.getElementById(""+newRow+"").outerHTML="";
+        document.getElementById("" + newRow + "").outerHTML = "";
 
     }
 
@@ -147,6 +153,55 @@
     document.getElementById("product-cancel-text").addEventListener("click", function () {
         document.querySelector(".add_Product_popup").style.display = "none";
     })
+
+    var index;
+    function getSelectedRow() {
+        var table = document.getElementById("display");
+        for (var i = 1; i < table.rows.length; i++) {
+            table.rows[i].onclick = function () {
+
+                if (typeof index !== "undefined") {
+                    table.rows[index].classList.toggle("selected");
+                }
+
+                index = this.rowIndex;
+                this.classList.toggle("selected");
+
+            };
+        }
+
+    }
+    getSelectedRow();
+
+
+    function upNdown(direction) {
+        var rows = document.getElementById("display").rows,
+            parent = rows[index].parentNode;
+        if (direction === "up") {
+            if (index > 1) {
+                parent.insertBefore(rows[index], rows[index - 1]);
+                index--;
+            }
+        }
+
+        if (direction === "down") {
+            if (index < rows.length - 1) {
+                parent.insertBefore(rows[index + 1], rows[index]);
+                index++;
+            }
+        }
+    }
+// drag and drop table rows using jquery
+    $(".row_drag").sortable({
+        delay: 100,
+        stop: function () {
+            var selectedRow = new Array();
+            $('.row_drag>tr').each(function () {
+                selectedRow.push($(this).attr("id"));
+            });
+        }
+    });
+
 </script>
 
 </html>
