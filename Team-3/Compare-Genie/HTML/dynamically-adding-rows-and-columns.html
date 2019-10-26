@@ -10,14 +10,15 @@
 </head>
 
 <body>
-    <div style="min-height: 8vh"></div>
+  
     <div class="main-container">
+
         <div class="header">
-            <div class="header-text"></div>
             <p style="font-weight: bold">COMPARE-GENIE</p>
         </div>
-        <div style="clear: both"></div>
-        <div style="min-height: 6vh"></div>
+
+        <p class="CreateFromBlank-text">Create From Blank</p>
+        <div style="min-height: 5vh"></div>
 
         <form>
 
@@ -40,11 +41,11 @@
                 </tbody>
 
             </table>
-
+            <div class="footer">
+                    <div><button type="button" onclick="BackPage()">Back</button></div>
+                    <div><button type="button" onclick=" nextpage()">Next</button></div>
+                </div>
         </form>
-
-        <button onclick="upNdown('up');">&ShortUpArrow;</button>
-        <button onclick="upNdown('down');">&ShortDownArrow;</button>
 
         <div class="add_Parameter_popup">
 
@@ -154,43 +155,7 @@
         document.querySelector(".add_Product_popup").style.display = "none";
     })
 
-    var index;
-    function getSelectedRow() {
-        var table = document.getElementById("display");
-        for (var i = 1; i < table.rows.length; i++) {
-            table.rows[i].onclick = function () {
-
-                if (typeof index !== "undefined") {
-                    table.rows[index].classList.toggle("selected");
-                }
-
-                index = this.rowIndex;
-                this.classList.toggle("selected");
-
-            };
-        }
-
-    }
-    getSelectedRow();
-
-
-    function upNdown(direction) {
-        var rows = document.getElementById("display").rows,
-            parent = rows[index].parentNode;
-        if (direction === "up") {
-            if (index > 1) {
-                parent.insertBefore(rows[index], rows[index - 1]);
-                index--;
-            }
-        }
-
-        if (direction === "down") {
-            if (index < rows.length - 1) {
-                parent.insertBefore(rows[index + 1], rows[index]);
-                index++;
-            }
-        }
-    }
+   
 // drag and drop table rows using jquery
     $(".row_drag").sortable({
         delay: 100,
@@ -201,6 +166,14 @@
             });
         }
     });
+
+    function BackPage() {
+        window.location = "create-from-blank-page.html";
+    }
+    // function nextpage() {
+    //     window.location = "dynamically-adding-rows-and-columns.html";
+    // }
+
 
 </script>
 

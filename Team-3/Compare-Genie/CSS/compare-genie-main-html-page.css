@@ -120,22 +120,3 @@ button{
     background-color: #eee;
     border: 1px solid #00F
 }
-.footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    margin: auto;
-    margin-top: 5%;
-}
-
-button[type="button"] {
-    border-radius: 23px;
-    background-color: #32BDD2;
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-}

@@ -1,0 +1,145 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../CSS/new-compare-genie-dynamic-table.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <table align='center' cellspacing=2 cellpadding=5 id="data_table" border=1>
+            <tr>
+                <th>SL.No</th>
+                <th>ADD PARAMETER<img src="../../IMAGES/request-icons-10.png" height="30" width="30" alt="cancel-image"
+                        id="addParameter"></th>
+                <th>ADD PRODUCT<img src="../../IMAGES/request-icons-10.png" height="30" width="30" alt="cancel-image"
+                    id="addProduct"></th>
+            </tr>
+            <tr>
+                <td><input type="text" id="new_sl_no"></td>
+                <td><input type="text" id="new_parameter"></td>
+                <td><input type="text" id="new_product"></td>
+            </tr>
+
+        </table>
+    </div>
+    <div class="add_Parameter_popup">
+
+        <div class="top">
+            <div>
+                <p><b>Add Parameter</b></p>
+            </div>
+            <div><img src="../../IMAGES/request-icons-13.png"  height="30" width="30" class="cancel-icon" alt="cancel-image">
+            </div>
+        </div>
+
+        <div class="middle">
+            <p style="padding: 5px">Enter a Parameter</p>
+            <input type="text" id="parameter" style="padding: 10px">
+            <div style="min-height: 5vh"></div>
+        </div>
+
+        <div class="bottom">
+            <div style="width:10%"><a href="#">CANCEL</a></div>
+            <div><button type="button" id="add"  >ADD</button></div>
+        </div>
+
+    </div>
+    <div class="add_Product_popup">
+
+            <div class="top">
+                <div>
+                    <p><b>Add Product</b></p>
+                </div>
+                <div><img src="../../IMAGES/request-icons-13.png"  height="30" width="30" class="cancel-icon" alt="cancel-image">
+                </div>
+            </div>
+    
+            <div class="middle">
+                <p style="padding: 5px">Enter a Product</p>
+                <input type="text" id="product" style="padding: 10px">
+                <div style="min-height: 5vh"></div>
+            </div>
+    
+            <div class="bottom">
+                <div style="width:10%"><a href="#">CANCEL</a></div>
+                <div><button type="button" id="productAdd" style="padding-left: 10px"
+                    onclick="addColumn('data_table')">ADD</button></div>
+            </div>
+    
+        </div>
+
+</body>
+<script>
+    function edit_row(no) {
+        
+        document.getElementById("edit_button"+no).style.display="none";
+ document.getElementById("save_button"+no).style.display="block";
+
+        var sl_no = document.getElementById("sl_no_row" + no);
+        var parameter = document.getElementById("parameter_row" + no);
+        var product = document.getElementById("product_row" + no);
+
+        var sl_no_data = sl_no.innerHTML;
+        var parameter_data = parameter.innerHTML;
+        var product_data = product.innerHTML;
+
+        sl_no.innerHTML = "<input type='text' id='sl_no_text" + no + "' value='" + sl_no_data + "'>";
+        parameter.innerHTML = "<input type='text' id='parameter_text" + no + "' value='" + parameter_data + "'>";
+        product.innerHTML = "<input type='text' id='product_text" + no + "' value='" + product_data + "'>";
+    }
+    function save_row(no)
+{
+ var sl_no_val=document.getElementById("sl_no_text"+no).value;
+ var parameter_val=document.getElementById("parameter_text"+no).value;
+ var product_val=document.getElementById("product_text"+no).value;
+
+ document.getElementById("sl_no_row"+no).innerHTML=sl_no_val;
+ document.getElementById("parameter_row"+no).innerHTML=parameter_val;
+ document.getElementById("product_row"+no).innerHTML=product_val;
+
+ document.getElementById("edit_button"+no).style.display="block";
+ document.getElementById("save_button"+no).style.display="none";
+}
+    function delete_row(no) {
+        document.getElementById("row" + no + "").outerHTML = "";
+    }
+
+    document.getElementById("addParameter").addEventListener("click", function () {
+        document.querySelector(".add_Parameter_popup").style.display = "block";
+    })
+    document.getElementById("add").addEventListener("click", function () {
+        document.querySelector(".add_Parameter_popup").style.display = "none";
+    })
+    document.getElementById("addProduct").addEventListener("click", function () {
+        document.querySelector(".add_Product_popup").style.display = "block";
+    })
+    document.getElementById("productAdd").addEventListener("click", function () {
+        document.querySelector(".add_Product_popup").style.display = "none";
+    })
+    
+    var entry = document.getElementById("add");
+    entry.addEventListener("click", displayDetails);
+
+    function displayDetails() {
+        var addParameter1 = document.getElementById("parameter").value;
+        var table = document.getElementById("data_table");
+        var table_len = (table.rows.length);
+        var row = table.insertRow(table_len).outerHTML = "<tr id='row" + table_len + "'><td id='sl_no_row" + table_len + "'>" + new_sl_no + "</td><td id='parameter_row" + table_len + "'>" + new_parameter + "</td><td id='product_row" + table_len + "'>" + new_product + "</td><td><input type='button' id='edit_button" + table_len + "' value='Edit' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button"+table_len+"' value='Save' class='save' onclick='save_row("+table_len+")'> <input type='button' value='Delete' class='delete' onclick='delete_row(" + table_len + ")'></td></tr>";
+       
+    }
+    function addColumn(tblId) {
+        var tblHeadObj = document.getElementById(tblId).tHead;
+        for (var h = 0; h < tblHeadObj.rows.length; h++) {
+            var newTH = document.createElement('th');
+            tblHeadObj.rows[h].appendChild(newTH);
+            newTH.innerHTML = 'Add Product <img src="images/request-icons-10.png" height="30" width="30" alt="cancel-image" id="addProduct">';
+        }
+        var tblBodyObj = document.getElementById(tblId).tBodies[0];
+	for (var i=0; i<tblBodyObj.rows.length; i++) {
+		var newCell = tblBodyObj.rows[i].insertCell(-1);
+		newCell.innerHTML ='';
+	}
+    }
+</script>
+
+</html>

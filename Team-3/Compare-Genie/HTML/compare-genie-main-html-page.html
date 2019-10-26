@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Compare-Genie</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../CSS/compare-genie-main-html-page.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<style>
+    textarea {
+        margin: 2% 0 0 6%;
+        text-align: center;
+        padding: 3% 0 0 0;
+        color: darkgray;
+    }
+
+    .compareGenie-text {
+        padding: 3% 0 0 6%;
+    }
+
+    .newSheet {
+        margin: auto;
+        padding: 3% 0 0 6%;
+    }
+
+    .CreateFromBlank {
+        border: 1px solid rgb(160, 155, 155);
+        margin: 2% 0 0 0%;
+        width: 12%;
+
+    }
+</style>
+
+<body>
+
+    <div class="main-container">
+        <div class="header">
+            <p style="font-weight: bold">COMPARE-GENIE</p>
+        </div>
+
+        <p class="compareGenie-text">COMPARE-GENIE</p>
+        <textarea cols="60" rows="4">About Compare Genie.... </textarea>
+
+        <div style="min-height: 3vh"></div>
+
+        <div class="newSheet">
+            <p style="font-weight: bold">Create new Comparision Sheet</p>
+            <div class="CreateFromBlank" onclick=" CreateFromBlank()">Create From Blank</div>
+        </div>
+
+        <div style="min-height: 35vh"></div>
+</div>
+</body>
+<script>
+    function CreateFromBlank() {
+        window.location="create-from-blank-page.html";
+    }
+</script>
+
+</html>

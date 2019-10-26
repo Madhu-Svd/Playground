@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Compare-Genie Creata</title>
+    <meta charset="utf-8">
+</head>
+<style>
+    .header{ 
+    margin: auto;
+    text-align: center;
+    border: 0.5px solid rgb(160, 155, 155);
+    padding: 1%;
+    background-color:#F9F8F9;
+}
+    textarea {
+        margin: 2% 0 0 6%;
+        text-align: center;
+        color: darkgray;
+    }
+    .file-text-area{
+        margin: 2% 0 0 6%;
+        width: 20%;
+        padding: 1%;
+        color: darkgray;
+    }
+
+    .filename {
+        padding: 1% 0 0 6%;
+        font-size: 1.2vw;
+    }
+
+    .BriefDescription-text {
+        padding: 1% 0 0 6%;
+        font-size: 1.2vw;
+        margin-top: 30px;
+    }
+
+    .CreateFromBlank-text {
+        margin: 2% 0 0 6%;
+        font-weight: bold;
+        font-size: 1.5vw;
+    }
+
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+        margin-top: 5%;
+    }
+
+    button[type="button"] {
+        border-radius: 23px;
+        background-color: #32BDD2;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+</style>
+
+<body>
+
+    <div class="main-container">
+        <div class="header">
+            <p style="font-weight: bold">COMPARE-GENIE</p>
+        </div>
+        <p class="CreateFromBlank-text">Create From Blank</p>
+        <div style="min-height: 3vh"></div>
+
+        <p class="filename">Filename*</p>
+        <input type="text" class="file-text-area" onclick="fileTextArea()"/>
+
+
+        <p class="BriefDescription-text">Brief Description</p>
+        <textarea cols="60" rows="6">About Compare Genie.... </textarea>
+
+        <div class="footer">
+            <div><button type="button" onclick="BackPage()">Back</button></div>
+            <div><button type="button" onclick=" nextpage()">Next</button></div>
+        </div>
+    </div>
+</body>
+<script>
+    function BackPage() {
+        window.location = "compare-genie-main-html-page.html";
+    }
+</script>
+<script>
+    function nextpage() {
+        window.location = "dynamically-adding-rows-and-columns.html";
+    }
+</script>
+<script>
+        function fileTextArea() {
+            window.location = "dynamically-adding-rows-and-columns.html";
+        }
+    </script>
+
+</html>

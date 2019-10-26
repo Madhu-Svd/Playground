@@ -4,30 +4,10 @@
     box-sizing: border-box;
 }
 html body{
+   
     margin: auto; 
     font-family: Roboto; 
-    background-color:#F6F8F9;
 }
-
-.main-container{
-    width: 100%;
-    margin: auto;
-    border: 1px solid #d1d0d0;
-    background-color:#FFFFFF;
-}
-.header{ 
-    margin: auto;
-    text-align: center;
-    border: 0.5px solid rgb(160, 155, 155);
-    padding: 2%;
-    background-color:#F9F8F9;
-}
-.CreateFromBlank-text {
-    margin: 3% 0 0 6%;
-    font-weight: bold;
-    font-size: 1.5vw;
-}
-
 .add_Parameter_popup{
     border: 1px solid;
     width: 40%;
@@ -101,41 +81,18 @@ html body{
     border-radius: 25px 25px 25px 25px;
 }
 .table{
-    margin: 0 0 0 6%;
+    margin-left:10% ;
 }
-
-.btn-edit {
-    width: 30%;
-    height: 5%;
-    background-color: #32BDD2;
-    margin-left: 25%;
-}
-.btn-delete{
-    height: 5%;
-    background-color: #32BDD2;
-   
-}
-button{
-    margin-top:2px;
-    background-color: #eee;
-    border: 1px solid #00F
-}
-.footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
+.main-container{
+    width: 50%;
     margin: auto;
-    margin-top: 5%;
+    border: 1px solid #d1d0d0;
+    background-color:#F9F8F9;
 }
-
-button[type="button"] {
-    border-radius: 23px;
-    background-color: #32BDD2;
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+.header{
+    
+    margin: auto;
+    text-align: center;
+    border: 0.5px solid rgb(160, 155, 155);
+    padding: 2%;
 }
