@@ -8,12 +8,12 @@ html body{
     font-family: Roboto; 
     background-color:#F6F8F9;
 }
-
 .main-container{
     width: 100%;
     margin: auto;
     border: 1px solid #d1d0d0;
     background-color:#FFFFFF;
+    position: relative;
 }
 .header{ 
     margin: auto;
@@ -22,16 +22,26 @@ html body{
     padding: 2%;
     background-color:#F9F8F9;
 }
+.main_table{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    float: left;
+}
 .CreateFromBlank-text {
-    margin: 3% 0 0 6%;
+    margin: 3% 0 0 3%;
     font-weight: bold;
     font-size: 1.5vw;
 }
 
 .add_Parameter_popup{
+    position: absolute;
     border: 1px solid;
-    width: 40%;
+    width: 20%;
     margin: auto;
+    top:30%;
+    left: 0;
+    right: 0;
     display: none; 
     border-radius: 25px 25px 25px 25px;
 }
@@ -95,16 +105,23 @@ html body{
 }
 .add_Product_popup{
     border: 1px solid;
-    width: 40%;
+    width: 20%;
+    position: absolute;
     margin: auto;
+    top:30%;
+    left: 0;
+    right: 0;
     display: none; 
     border-radius: 25px 25px 25px 25px;
+    /* background:rgba(0, 0, 0,0.7) ;
+    transition: opacity 500ms;
+    opacity: 1; */
 }
 .table{
     margin: 0 0 0 6%;
 }
 
-.btn-edit {
+/* .btn-edit {
     width: 30%;
     height: 5%;
     background-color: #32BDD2;
@@ -114,7 +131,7 @@ html body{
     height: 5%;
     background-color: #32BDD2;
    
-}
+} */
 button{
     margin-top:2px;
     background-color: #eee;

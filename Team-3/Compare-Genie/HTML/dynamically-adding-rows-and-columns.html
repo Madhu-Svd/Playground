@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  
+
     <div class="main-container">
 
         <div class="header">
@@ -21,30 +21,43 @@
         <div style="min-height: 5vh"></div>
 
         <form>
+            <div class="main_table">
+                <table id="display" border="1" class="table">
 
-            <table id="display" border="1" class="table">
+                    <thead>
+                        <tr width="100px">
+                            <th>Add Parameter<img src="../IMAGES/request-icons-10.png" height="20" width="20"
+                                    alt="cancel-image" id="addParameter"></th>
+                        </tr>
+                    </thead>
 
-                <thead>
+                    <tbody class="row_drag">
+                        <tr id="1">
+                            <td width="140px">Eg:color</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+            <div style="float:left">
+                <table id="product_table" border="1">
                     <tr>
-                        <th>Add Parameter<img src="../IMAGES/request-icons-10.png" height="30" width="30"
-                                alt="cancel-image" id="addParameter"></th>
-                        <th>Add Product<img src="../IMAGES/request-icons-10.png" height="30" width="30"
-                                alt="cancel-image" id="addProduct"></th>
+                        <td>Add Product<img src="../IMAGES/request-icons-10.png" height="20" width="20"
+                                alt="cancel-image" id="addProduct"></td>
                     </tr>
-                </thead>
+                    <tbody class="row_drag">
+                        <tr id="1">
+                            <td width="100px">Eg:Samsung</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-                <tbody class="row_drag">
-                    <tr id="1">
-                        <td width="100px">Eg:color</td>
-                        <td width="100px">Eg:Red</td>
-                    </tr>
-                </tbody>
-
-            </table>
+            </div>
+            <div style="min-height: 20vh"></div>
             <div class="footer">
-                    <div><button type="button" onclick="BackPage()">Back</button></div>
-                    <div><button type="button" onclick=" nextpage()">Next</button></div>
-                </div>
+                <div><button type="button" onclick="BackPage()">Back</button></div>
+                <div><button type="button" onclick=" nextpage()">Next</button></div>
+            </div>
         </form>
 
         <div class="add_Parameter_popup">
@@ -72,6 +85,7 @@
         </div>
 
         <div class="add_Product_popup">
+
 
             <div class="top">
                 <div>
@@ -101,17 +115,20 @@
 </body>
 
 <script>
+
     function addColumn(tblId) {
+        var product = document.getElementById("product").value;
+        const product_name = product.toString().toUpperCase().trim();
         var tblHeadObj = document.getElementById(tblId).tHead;
         for (var h = 0; h < tblHeadObj.rows.length; h++) {
             var newTH = document.createElement('th');
             tblHeadObj.rows[h].appendChild(newTH);
-            newTH.innerHTML = 'Add Product <img src="../IMAGES/request-icons-10.png" height="30" width="30" alt="cancel-image" id="addProduct">';
+            newTH.innerHTML = product_name;
         }
         var tblBodyObj = document.getElementById("display").tBodies[0];
         for (var i = 0; i < tblBodyObj.rows.length; i++) {
             var newCell = tblBodyObj.rows[i].insertCell(-1);
-            newCell.innerHTML = '';
+            newCell.innerHTML = '<input type="text"/>';
         }
     }
 
@@ -122,14 +139,9 @@
 
         var display = document.getElementById("display");
         var newRow = display.insertRow(display.rows.length);
-        newRow.outerHTML = ("<tr data-name='" + addParameter1 + "'><td>" + addParameter1 + "</td><td><button class='btn btn-info btn-xs btn-edit'>Edit</button><button class='btn btn-danger btn-xs btn-delete'  onclick='delete_row(" + newRow + ")' id='delete'>Delete</button></td></tr>");
+        newRow.outerHTML = ("<tr data-name='" + addParameter1 + "'><td>" + addParameter1 + "</td></tr>");
 
     }
-    function delete_row() {
-        document.getElementById("" + newRow + "").outerHTML = "";
-
-    }
-
     document.getElementById("addParameter").addEventListener("click", function () {
         document.querySelector(".add_Parameter_popup").style.display = "block";
     })
@@ -155,8 +167,8 @@
         document.querySelector(".add_Product_popup").style.display = "none";
     })
 
-   
-// drag and drop table rows using jquery
+
+    // drag and drop table rows using jquery
     $(".row_drag").sortable({
         delay: 100,
         stop: function () {
@@ -170,10 +182,6 @@
     function BackPage() {
         window.location = "create-from-blank-page.html";
     }
-    // function nextpage() {
-    //     window.location = "dynamically-adding-rows-and-columns.html";
-    // }
-
 
 </script>
 

@@ -125,7 +125,7 @@
         var table = document.getElementById("data_table");
         var table_len = (table.rows.length);
         var row = table.insertRow(table_len).outerHTML = "<tr id='row" + table_len + "'><td id='sl_no_row" + table_len + "'>" + new_sl_no + "</td><td id='parameter_row" + table_len + "'>" + new_parameter + "</td><td id='product_row" + table_len + "'>" + new_product + "</td><td><input type='button' id='edit_button" + table_len + "' value='Edit' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button"+table_len+"' value='Save' class='save' onclick='save_row("+table_len+")'> <input type='button' value='Delete' class='delete' onclick='delete_row(" + table_len + ")'></td></tr>";
-       
+       row.outerHTML=addParameter1;
     }
     function addColumn(tblId) {
         var tblHeadObj = document.getElementById(tblId).tHead;
@@ -143,3 +143,55 @@
 </script>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- //    function addColumn(){
+    //         var tableDisplay = document.getElementById("display");
+    //         var n = document.getElementById("display").getElementsByTagName("tr").length;
+    //         var i=0;
+    //         var product = document.getElementById("product").value;
+    //         const product_name = product.toString().toUpperCase().trim();
+    //         if(n>1){
+    //             tr = tableDisplay.getElementsByTagName("tr");
+    //             hedders = tableDisplay.getElementsByTagName("th");
+    //             console.log(hedders.length); 
+    //             for(i=1;i<n;i++){
+    //                 var td = document.createElement('td');
+    //                 var input = document.createElement('INPUT');
+    //                 input.type = 'text';
+    //                 td.appendChild(input);
+    //                 tr[i].appendChild(td);
+    //             }
+    //             var th = document.createElement('th');
+    //             var text = document.createTextNode(product_name);
+    //             console.log(th);
+    //             th.appendChild(text);
+    //             tr[0].appendChild(th);
+    //         }else{
+    //             alert("Parameter not inserted");
+    //         }
+    //     } -->
